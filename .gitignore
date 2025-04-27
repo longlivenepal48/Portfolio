@@ -1,0 +1,19 @@
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Temporary files
+*.log
+*.cache
+*.tmp
+
+# Sensitive data
+.env
+*.secret
+
+# R/Python specific
+.Rhistory
+.RData
+*.pyc
+__pycache__/
