@@ -18,16 +18,9 @@ title: Data Analysis
     </div>
 </div>
     <ul>
-    <li><strong>Diamonds</strong>: attributes, price relationship analysis</li>
+    <li><strong>Diamonds</strong>: <strong>attributes, price relationship analysis</strong></li>
     <li>
         <strong>Data Analysis Process</strong>
-        <ul>
-            <li>Data Importation</li>
-            <li>Data Cleaning</li>
-            <li>Summary Statistics</li>
-            <li>Analysis</li>
-            <li>Visualisation</li>
-        </ul>
     </li>
     <li>
         <strong>Findings</strong>
