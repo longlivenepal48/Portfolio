@@ -1,0 +1,427 @@
+/* style.css */
+
+/* --------------------
+ * Table of Contents
+ * --------------------
+ * 1.  Global Styles
+ * 2.  Header
+ * 3.  Navigation
+ * 4.  Main
+ * 5.  Featured Sections
+ * 6.  Project Boxes
+ * 7.  Footer
+ * 8.  Responsive Design
+ * 9.  Utility Classes
+ * 10. Dark Mode (System Preference)
+ * 11. Font Awesome Icons
+ * --------------------
+ */
+
+/* --------------------
+ * 1. Global Styles
+ * --------------------
+ */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #495057;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+p, li, div {
+  text-align: justify;
+}
+
+/* --------------------
+ * 2. Header - Corrected Section
+ * --------------------
+ */
+header {
+  background-color: #547792;
+  color: white;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* --------------------
+ * 3. Header Contact
+ * --------------------
+ */
+.header-contact {
+  display: flex;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.header-contact a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.header-contact a:hover {
+  text-decoration: underline;
+  color: #c6cbd1;
+}
+
+/* --------------------
+ * 4. Navigation
+ * --------------------
+ */
+nav {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 0 0;
+}
+
+nav a {
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 0.9em;
+  text-decoration: none;
+  background-color: #007bff;
+  border: 1px solid #adb5bd;
+}
+
+nav a:hover {
+  background-color: #2ecc71;
+  text-decoration: none;
+}
+
+/* --------------------
+ * 5. Main
+ * --------------------
+ */
+main {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h1 {
+  font-size: 2em;
+  margin-bottom: 12px;
+  color: #6c757d;
+  border-bottom: 2px solid #adb5bd;
+  padding-bottom: 4px;
+}
+
+main h2 {
+  font-size: 1.6em;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: #6c757d;
+}
+
+main h3 {
+  font-size: 1.3em;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  color: #6c757d;
+}
+
+main p {
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+
+main strong {
+  font-weight: bold;
+}
+
+main ul, main ol {
+  margin-bottom: 8px;
+  padding-left: 16px;
+}
+
+/* --------------------
+ * 6. Featured Sections
+ * --------------------
+ */
+.featured-sections-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.featured-section {
+  width: calc(50% - 8px);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: background-color 0.3s ease;
+  background-color: #f8f9fa;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.featured-section:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.featured-section h3 {
+  font-size: 1.1em;
+  margin-top: 0;
+  margin-bottom: 4px;
+  color: #007bff;
+}
+
+.featured-section p {
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+/* --------------------
+ * 7. Project Boxes
+ * --------------------
+ */
+.project-box {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #f8f9fa;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.project-box h3 {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 1.2em;
+  color: #007bff;
+}
+
+.project-number {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.project-link {
+  margin-top: 4px;
+}
+
+.project-link a {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* --------------------
+ * 8. Footer - Corrected Back Button Size
+ * --------------------
+ */
+footer {
+  background-color: #547792;
+  color: white;
+  text-align: left;
+  padding: 8px 15px;
+  margin-top: 24px;
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-left button {
+  background-color: #007bff;
+  border: 1px solid black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.footer-left button span {
+  display: inline-block;
+}
+
+.footer-left button span:hover {
+  transform: scale(1.5);
+}
+
+.footer-right {
+  float: right;
+  font-size: 0.9em;
+}
+
+footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* --------------------
+ * 9. Responsive Design
+ * --------------------
+ */
+@media (max-width: 768px) {
+  header {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .header-left h1 {
+    font-size: 1.8em;
+  }
+
+  .header-contact {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    width: auto;
+  }
+
+  .footer-left button {
+    padding: 5px 10px;
+    font-size: 1em;
+  }
+}
+
+/* --------------------
+ * 10. System-Based Dark Mode
+ * --------------------
+ */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #bb86fc;
+  }
+
+  a:hover {
+    color: #9e65f3;
+  }
+
+  header, footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #333;
+  }
+
+  nav a {
+    background-color: #3700b3;
+    border-color: #03dac6;
+    color: white;
+  }
+
+  nav a:hover {
+    background-color: #03dac6;
+    color: #000;
+  }
+
+  main h1,
+  main h2,
+  main h3 {
+    color: #bb86fc;
+    border-color: #3700b3;
+  }
+
+  .featured-section,
+  .project-box {
+    background-color: #1e1e1e;
+    border-color: #bb86fc;
+    color: #e0e0e0;
+  }
+
+  .featured-section h3,
+  .project-box h3 {
+    color: #03dac6;
+  }
+
+  .footer-left button {
+    background-color: #3700b3;
+    border-color: #03dac6;
+    color: white;
+  }
+
+  .footer-left button:hover {
+    background-color: #03dac6;
+    color: #000;
+  }
+
+  /* Adjust subtle patterns for dark mode */
+  .featured-section,
+  .project-box {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23607d8b' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+}
+
+/* --------------------
+ * 11. Utility Classes
+ * --------------------
+ */
+.clear {
+  clear: both;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+[class^="fa-"] {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 5px;
+}
