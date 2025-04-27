@@ -8,8 +8,8 @@ title: Introduction
 **CA. Anup Acharya**  
 **Chartered Accountant | CPA (Australia) | Certified Data Analyst**  
 <a href="https://www.linkedin.com/in/ca-anup-acharya-761737ba/">  
-  <img src="/assets/images/linkedin.png" alt="LinkedIn" width="30" height="30">
-  &nbsp;
+  <img src="/assets/images/linkedin.png" alt="LinkedIn" width="25" height="25">
+  &nbsp;&nbsp;
   <img src="/assets/images/gmail.png" alt="Gmail" width="30" height="30">
 </a>
 
