@@ -18,10 +18,27 @@ title: Data Analysis
     </div>
 </div>
     <ul>
-        <li>Processed 5 years of financial statements from 12 major hospitality companies</li>
-        <li>Created interactive dashboards showing YoY performance metrics</li>
-        <li>Identified key financial indicators predicting recovery strength</li>
-    </ul>
+    <li><strong>Diamonds</strong>: attributes, price relationship analysis</li>
+    <li>
+        <strong>Data Analysis Process</strong>
+        <ul>
+            <li>Data Importation</li>
+            <li>Data Cleaning</li>
+            <li>Summary Statistics</li>
+            <li>Analysis</li>
+            <li>Visualisation</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Findings</strong>
+        <ul>
+            <li>"Premium" cut diamonds have a higher average price...</li>
+            <li>Color J diamonds contradict grading standards...</li>
+            <li>Price per volume increases with clarity...</li>
+            <li>Unexpected dip for VVS1 clarity...</li>
+        </ul>
+    </li>
+</ul>
 </div>
 
 <div class="project-box">
