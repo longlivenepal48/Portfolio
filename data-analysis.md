@@ -25,10 +25,9 @@ title: Data Analysis
     <li>
         <strong>Findings</strong>
         <ul>
-            <li>"Premium" cut diamonds have a higher average price...</li>
-            <li>Color J diamonds contradict grading standards...</li>
-            <li>Price per volume increases with clarity...</li>
-            <li>Unexpected dip for VVS1 clarity...</li>
+            <li>"Fair" Cut Outperforms</li>
+            <li>Depth/Table Ratio Anomaly</li>
+            <li>Fluorescence Price Paradox</li>
         </ul>
     </li>
 </ul>
