@@ -9,14 +9,14 @@ title: Data Analysis
     <div class="project-number">Project I</div>
     
     <!-- New Header Section -->
-    <div class="project-header">
-        <img src="assets/images/diamond.png" alt="Diamond" width="100" height="100" class="diamond-img">
-        <div class="project-header-text">
-            <h3>Analysis of Diamonds</h3>
-            <div class="dataset-title">Diamond Dataset</div>
-            <div class="tools-used">Tools: R Studio</div>
-        </div>
+    <div class="project-header" style="display: flex; align-items: flex-start; gap: 10px;">
+    <img src="assets/images/diamond.png" alt="Diamond" width="30" height="30" style="flex-shrink: 0;">
+    <div class="project-header-text">
+        <h3 style="margin: 0 0 4px 0; font-size: 1.25em;">Analysis of Diamonds</h3>
+        <div class="dataset-title" style="font-size: 0.95em; color: #666; margin-bottom: 4px;">Diamond Dataset</div>
+        <div class="tools-used" style="font-size: 0.9em; color: #2c82c9; font-weight: 500;">Tools: R Studio</div>
     </div>
+</div>
     <ul>
         <li>Processed 5 years of financial statements from 12 major hospitality companies</li>
         <li>Created interactive dashboards showing YoY performance metrics</li>
