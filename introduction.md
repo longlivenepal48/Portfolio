@@ -3,17 +3,17 @@ layout: default
 title: Introduction
 ---
   
-<img src="/assets/images/Logo_Anup_Acharya.png" alt="CA. Anup Acharya" width="100" height="100">
+<img src="assets/images/Logo_Anup_Acharya.png" alt="CA. Anup Acharya" width="100" height="100">
   
 **CA. Anup Acharya**  
 **Chartered Accountant | CPA (Australia) | Certified Data Analyst**  
 
 <a href="mailto:longlivenepal48@gmail.com">
-  <img src="/assets/images/gmail.png" alt="Gmail" width="30" height="30">
+  <img src="assets/images/gmail.png" alt="Gmail" width="30" height="30">
 </a>
 &nbsp;&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/ca-anup-acharya-761737ba/">
-  <img src="/assets/images/linkedin.png" alt="LinkedIn" width="30" height="30">
+  <img src="assets/images/linkedin.png" alt="LinkedIn" width="30" height="30">
 </a>
 
 <h1>Professional Profile</h1>
