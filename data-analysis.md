@@ -7,10 +7,16 @@ title: Data Analysis
 
 <div class="project-box">
     <div class="project-number">Project I</div>
-    <h3>Financial Statement Analysis - Nepalese Tourism Industry</h3>
-    <p><strong>Technologies Used:</strong> R Studio, dplyr, ggplot2, Excel</p>
-    <p><strong>Date:</strong> January 2025</p>
-    <p>Analysis of financial performance trends across key players in Nepal's tourism sector, identifying growth patterns and financial stability metrics during post-pandemic recovery.</p>
+    
+    <!-- New Header Section -->
+    <div class="project-header">
+        <img src="assets/images/diamond.png" alt="Diamond" class="diamond-img">
+        <div class="project-header-text">
+            <h3>Analysis of Diamonds</h3>
+            <div class="dataset-title">Diamond Dataset</div>
+            <div class="tools-used">Tools: R Studio</div>
+        </div>
+    </div>
     <ul>
         <li>Processed 5 years of financial statements from 12 major hospitality companies</li>
         <li>Created interactive dashboards showing YoY performance metrics</li>
