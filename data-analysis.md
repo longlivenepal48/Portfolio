@@ -22,9 +22,6 @@ title: Data Analysis
     <ul>
     <li><strong>Diamonds</strong>: <strong>attributes, price relationship analysis</strong></li>
     <li>
-        <strong>Data Analysis Process</strong>
-    </li>
-    <li>
         <strong>Findings</strong>
         <ul>
             <li>"Fair" Cut Outperforms</li>
@@ -39,7 +36,6 @@ title: Data Analysis
     <div class="project-number">Project II</div>
     <h3>Audit Process Optimization</h3>
     <p><strong>Technologies Used:</strong> SQL, Tableau, Excel</p>
-    <p><strong>Date:</strong> November 2024</p>
     <p>Leveraging audit data.</p>
     <ul>
         <li>Analyzed audit findings</li>
@@ -51,8 +47,19 @@ title: Data Analysis
 <div class="project-box">
     <div class="project-number">Project III</div>
     <h3>Cash Flow Forecasting Model</h3>
-    <p><strong>Technologies Used:</strong> Python, pandas, scikit-learn, Excel</p>
-    <p><strong>Date:</strong> August 2024</p>
+    <p><strong>Tools Used:</strong> Python, pandas, scikit-learn, Excel</p>
+    <p>Developed a MLM</p>
+    <ul>
+        <li>Created time-series</li>
+        <li>Integrated key predictor variables</li>
+        <li>Built user-friendly interface</li>
+    </ul>
+</div>
+
+<div class="project-box">
+    <div class="project-number">Project IV</div>
+    <h3>City Bikes</h3>
+    <p><strong>Tools Used:</strong> Python, pandas, scikit-learn, Excel</p>
     <p>Developed a MLM</p>
     <ul>
         <li>Created time-series</li>
