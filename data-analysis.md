@@ -10,7 +10,7 @@ title: Data Analysis
     
     <!-- New Header Section -->
     <div class="project-header">
-        <img src="assets/images/diamond.png" alt="Diamond" class="diamond-img">
+        <img src="assets/images/diamond.png" alt="Diamond" width="100" height="100" class="diamond-img">
         <div class="project-header-text">
             <h3>Analysis of Diamonds</h3>
             <div class="dataset-title">Diamond Dataset</div>
