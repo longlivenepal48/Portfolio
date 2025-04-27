@@ -10,7 +10,7 @@ title: Data Analysis
     
     <!-- New Header Section -->
     <div class="project-header" style="display: flex; align-items: flex-start; gap: 10px;">
-    <img src="assets/images/diamond.png" alt="Diamond" width="30" height="30" style="flex-shrink: 0;">
+    <img src="assets/images/diamond.png" alt="Diamond" width="80" height="80" style="flex-shrink: 0;">
     <div class="project-header-text">
         <h3 style="margin: 0 0 4px 0; font-size: 1.25em;">Analysis of Diamonds</h3>
         <div class="dataset-title" style="font-size: 0.95em; color: #666; margin-bottom: 4px;">Diamond Dataset</div>
