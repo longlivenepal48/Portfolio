@@ -40,11 +40,11 @@ title: Data Analysis
     <h3>Audit Process Optimization</h3>
     <p><strong>Technologies Used:</strong> SQL, Tableau, Excel</p>
     <p><strong>Date:</strong> November 2024</p>
-    <p>Leveraging audit data to identify patterns in compliance issues and recommending process improvements.</p>
+    <p>Leveraging audit data.</p>
     <ul>
-        <li>Analyzed 3 years of audit findings across 7 business units</li>
-        <li>Developed visualization dashboard for management reporting</li>
-        <li>Recommended control improvements that reduced audit findings by 35%</li>
+        <li>Analyzed audit findings</li>
+        <li>Developed dashboard</li>
+        <li>Recommended controls</li>
     </ul>
 </div>
 
@@ -53,10 +53,10 @@ title: Data Analysis
     <h3>Cash Flow Forecasting Model</h3>
     <p><strong>Technologies Used:</strong> Python, pandas, scikit-learn, Excel</p>
     <p><strong>Date:</strong> August 2024</p>
-    <p>Developed a machine learning model to forecast cash flow needs for hospitality businesses.</p>
+    <p>Developed a MLM</p>
     <ul>
-        <li>Created time-series prediction model with 87% accuracy rate</li>
-        <li>Integrated seasonal tourism data as key predictor variables</li>
-        <li>Built user-friendly interface for finance teams to simulate scenarios</li>
+        <li>Created time-series</li>
+        <li>Integrated key predictor variables</li>
+        <li>Built user-friendly interface</li>
     </ul>
 </div>
