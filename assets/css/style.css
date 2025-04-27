@@ -236,8 +236,12 @@ main ul, main ol {
 }
 
 .project-number {
+  font-size: 2rem;
+  color: #2c3e50;
   font-weight: bold;
+  margin: 0.5em 0;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
 
 .project-link {
