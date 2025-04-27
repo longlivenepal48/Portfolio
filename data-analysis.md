@@ -4,7 +4,9 @@ title: Data Analysis
 ---
 
 # Data Analysis Projects
-
+<!-- wrapper div -->
+<div class="project-container">
+    
 <div class="project-box">
     <div class="project-number">Project I</div>
     
