@@ -336,7 +336,7 @@ footer::after {
     padding: 5px 10px;
     font-size: 1em;
   }
-  project-container {
+  .project-container {
     grid-template-columns: 1fr;
   }
 }
