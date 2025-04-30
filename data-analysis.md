@@ -32,17 +32,30 @@ title: Data Analysis
   </div>
 </a>
 
-<div class="project-box">
+<a href="projects/data-analysis/population-project/population_project.html" target="_blank" style="text-decoration:none;color:inherit;display:block;">
+  <div class="project-box">
     <div class="project-number">Project II</div>
-    <h3>Audit Process Optimization</h3>
-    <p><strong>Technologies Used:</strong> SQL, Tableau, Excel</p>
-    <p>Leveraging audit data.</p>
+    <div class="project-header" style="display: flex; align-items: flex-start; gap: 10px;">
+      <img src="assets/images/people.png" alt="Population" width="80" height="80" style="flex-shrink: 0;">
+      <div class="project-header-text">
+        <h3 style="margin: 0 0 4px 0; font-size: 1.25em;">Analysis of Demography</h3>
+        <div class="dataset-title" style="font-size: 0.95em; color: #666; margin-bottom: 4px;">Population Dataset</div>
+        <div class="tools-used" style="font-size: 0.9em; color: #2c82c9; font-weight: 500;">Tools: R Studio</div>
+      </div>
+    </div>
     <ul>
-        <li>Analyzed audit findings</li>
-        <li>Developed dashboard</li>
-        <li>Recommended controls</li>
+      <li><strong>Population</strong>: <strong>Distribution, growth rate analysis</strong></li>
+      <li>
+        <strong>Findings</strong>
+        <ul>
+          <li>Population Distribution Inequality</li>
+          <li>Growth Rate Dynamics</li>
+          <li>Individual Country Trajectory Analysis</li>
+        </ul>
+      </li>
     </ul>
-</div>
+  </div>
+</a>
 
 <div class="project-box">
     <div class="project-number">Project III</div>
