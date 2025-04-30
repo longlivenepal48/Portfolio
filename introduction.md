@@ -22,7 +22,7 @@ title: Introduction
 
 <h2>Professional Experience</h2>
 
-<h3>Chief Financial Officer</h3>
+<h3>Chief Financial Officer | Sherpa Hospitality Group | Kathmandu| 17 December 2023 – March 31 2025</h3>
 <ul>
   <li>Managed financial operations across 7+ hospitality entities.</li>
   <li>Orchestrated private equity placement.</li>
@@ -32,14 +32,14 @@ title: Introduction
   <li>Ensured statutory compliance for all entities, liaising with the Inland Revenue Department and Public Accounts Committee for tax assessments and arrears.</li>
 </ul>
 
-<h3>Finance Controller</h3>
+<h3>Finance Controller | Thamserku Trekking Group | Kathmandu | April 11 2022 – December 16 2023</h3>
 <ul>
   <li>Automated aging reports for trade receivables and payables, replacing manual processes. Designed monthly cash flow and fund flow statements to optimize financial planning.</li>
   <li>Implemented the first comprehensive budgeting system, providing monthly reports to the Senior Management Team.</li>
   <li>Developed systematic asset management coding, created standardized cost sheets, and introduced project costing analysis to enhance financial reporting and analysis.</li>
 </ul>
 
-<h3>Finance Executive - Head of Department</h3>
+<h3>Finance Executive-Head of Department | Eastern Sugar Mills Limited | Kathmandu | 01 August 2021 – March 31 2022</h3>
 <ul>
   <li>Developed asset management coding, standardized cost sheets, and project costing analysis to enhance financial reporting and audit management.</li>
   <li>Conducted detailed financial trend analysis, including gross profit margins and cost structures. Designed budgeting frameworks and automated reporting systems for improved profitability and accurate forecasting.</li>
@@ -48,7 +48,7 @@ title: Introduction
   <li>Identified cost-saving opportunities through economies of scale and efficient resource use. Designed SOPs to optimize processes and ensure streamlined operations with consistent results.</li>
 </ul>
 
-<h3>Senior Internal Auditor</h3>
+<h3>Senior Internal Auditor | United Distributor Nepal Private Limited (Consultant-DABN & Co, Chartered Accountants) | Kathmandu | 14 May 2020 – 12 June 2021</h3>
 <ul>
   <li>Designed and implemented a centralized audit recommendation tracking system tailored to the company's operational needs.</li>
   <li>Conducted internal audits for operational efficiency, ensuring financial compliance, risk assessment, and implementing strategic mitigation strategies to enhance regulatory control.</li>
@@ -58,7 +58,7 @@ title: Introduction
   <li>Identified root causes by analyzing recurring issues and trends from audit recommendations and proposed strategic improvements to processes.</li>
 </ul>
 
-<h3>Article Service</h3>
+<h3>5.	Article Service | Vaithisvaran & Co, Chartered Accountants| Chennai | 09 Feb 2015 – 08 Feb 2018</h3>
 
 <h2>Education</h2>
 <ul>
