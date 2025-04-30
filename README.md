@@ -31,41 +31,42 @@ To run this portfolio locally:
 ```
 portfolio
   ├── _includes
-  │      └README.md
+  │      └ _includes-README.md
   ├── _layouts
-  │      ├──README.MD
-  │      └──default.html
+  │      ├── _layouts-README.MD
+  │      └── default.html
   ├── assets
-  │      ├──css
-  │      │   ├──README.md
-  │      │   ├──fonts.css
-  │      │   └──style.css
+  │      ├── css
+  │      │   ├── css-README.md
+  │      │   ├── fonts.css
+  │      │   └── style.css
   │      ├──fonts
-  │      │   ├──README.md
-  │      │   ├──fa-brands-400.ttf
-  │      │   ├──fa-brands-400.woff2
-  │      │   ├──fa-regular-400.ttf
-  │      │   ├──fa-regular-400.woff2
-  │      │   ├──fa-solid-900.ttf
-  │      │   └──fa-solid-900.woff2
-  │      └──images
-  │          ├──README.md
-  │          ├──Logo_Anup_Acharya.png
-  │          ├──diamond.png
-  │          ├──gmail.png
-  │          └──linkedin.png
+  │      │   ├── fonts-README.md
+  │      │   ├── fa-brands-400.ttf
+  │      │   ├── fa-brands-400.woff2
+  │      │   ├── fa-regular-400.ttf
+  │      │   ├── fa-regular-400.woff2
+  │      │   ├── fa-solid-900.ttf
+  │      │   └── fa-solid-900.woff2
+  │      └── images
+  │          ├── images-README.md
+  │          ├── Logo_Anup_Acharya.png
+  │          ├── diamond.png
+  │          ├── gmail.png
+  │          └── linkedin.png
   ├── projects
-  │      ├──README.md
-  │      └──data_analysis
-  │      │    ├──README.md
+  │      ├── projects-README.md
+  │      └── data_analysis
+  │      │    ├──data-analysis-README.md
   │      │    ├──diamond-project
-  │      │    │    ├──extracted data subsets
+  │      │    │    ├──extracted-data-subsets
   │      │    │    ├──graphs
   │      │    │    ├──rstudiofiles
   │      │    │    ├──diamond-project.html
-  │      │    │    └──README.md
-  │      │    └──populaiton-project
-  │      └──README.md
+  │      │    │    └──diamond-project-README.md
+  │      │    └──population-project
+  │      │         └──population-project-README.md
+  │      └──projects-README.md
   ├── .gitignore
   ├── README.md
   ├── big-data.md
