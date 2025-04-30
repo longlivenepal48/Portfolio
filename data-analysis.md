@@ -30,6 +30,11 @@ title: Data Analysis
         </ul>
     </li>
 </ul>
+<div class="project-link">
+        <a href="projects/data_analysis/diamond-project/diamond-project.html" target="_blank">
+            View Full Analysis
+        </a>
+    </div>
 </div>
 
 <div class="project-box">
