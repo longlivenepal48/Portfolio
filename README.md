@@ -27,20 +27,52 @@ To run this portfolio locally:
 5. Run `bundle exec jekyll serve`
 6. Open your browser and go to `http://localhost:4000`
 
-## Project Structure
-- **_layouts/**: Contains layout templates used across the site.
-- **assets/**: Holds all static files like CSS and images.
-  - **css/**: Stylesheets for the site.
-  - **images/**: Image files including logos.
-- **includes/**: Reusable components such as navigation menus.
-- **introduction.md**: Your CV and professional background.
-- **data-analysis.md**: Projects related to data analysis.
-- **big-data.md**: Projects related to big data technologies.
-- **kaggle.md**: Entries and work related to Kaggle competitions.
-- **index.md**: The homepage of your portfolio.
-- **_config.yml**: Configuration file for Jekyll static site generator.
-- **README.md**: This file, containing repository information.
-
+## Project Data Structure
+```
+portfolio
+  ├── _includes
+  │      └README.md
+  ├── _layouts
+  │      ├──README.MD
+  │      └──default.html
+  ├── assets
+  │      ├──css
+  │      │   ├──README.md
+  │      │   ├──fonts.css
+  │      │   └──style.css
+  │      ├──fonts
+  │      │   ├──README.md
+  │      │   ├──fa-brands-400.ttf
+  │      │   ├──fa-brands-400.woff2
+  │      │   ├──fa-regular-400.ttf
+  │      │   ├──fa-regular-400.woff2
+  │      │   ├──fa-solid-900.ttf
+  │      │   └──fa-solid-900.woff2
+  │      └──images
+  │          ├──README.md
+  │          ├──Logo_Anup_Acharya.png
+  │          ├──diamond.png
+  │          ├──gmail.png
+  │          └──linkedin.png
+  │
+  ├── projects
+  │      ├──README.md
+  │      └──data_analysis
+  │      │    ├──
+  │      │    ├──
+  │      │    ├──
+  │      │    ├──
+  │      │    └──
+  │      └──population
+  │           └──README.md
+  ├── .gitignore
+  ├── README.md
+  ├── big-data.md
+  ├── data-analysis.md
+  ├── index.md
+  ├── introduction.md
+  └── kaggle.md
+```
 ---
 
 ## Contact Information
