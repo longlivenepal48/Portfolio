@@ -54,17 +54,18 @@ portfolio
   │          ├──diamond.png
   │          ├──gmail.png
   │          └──linkedin.png
-  │
   ├── projects
   │      ├──README.md
   │      └──data_analysis
-  │      │    ├──
-  │      │    ├──
-  │      │    ├──
-  │      │    ├──
-  │      │    └──
-  │      └──population
-  │           └──README.md
+  │      │    ├──README.md
+  │      │    ├──diamond-project
+  │      │    │    ├──extracted data subsets
+  │      │    │    ├──graphs
+  │      │    │    ├──rstudiofiles
+  │      │    │    ├──diamond-project.html
+  │      │    │    └──README.md
+  │      │    └──populaiton-project
+  │      └──README.md
   ├── .gitignore
   ├── README.md
   ├── big-data.md
