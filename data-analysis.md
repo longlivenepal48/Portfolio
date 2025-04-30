@@ -7,7 +7,7 @@ title: Data Analysis
 <!-- wrapper div -->
 <div class="project-container">
     
-<a href="projects/data_analysis/diamond-project/diamond-project.html" target="_blank" style="text-decoration:none;color:inherit;display:block;">
+<a href="projects/data-analysis/diamond-project/diamond-project.html" target="_blank" style="text-decoration:none;color:inherit;display:block;">
   <div class="project-box">
     <div class="project-number">Project I</div>
     <div class="project-header" style="display: flex; align-items: flex-start; gap: 10px;">
