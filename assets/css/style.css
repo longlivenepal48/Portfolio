@@ -233,6 +233,12 @@ main ul, main ol {
   color: #fff;
 }
 
+.project-box:hover h3,
+.project-box:hover p,
+.project-box:hover a {
+  color: #fff;
+}
+
 .project-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
