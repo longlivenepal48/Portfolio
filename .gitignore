@@ -17,3 +17,4 @@ Thumbs.db
 .RData
 *.pyc
 __pycache__/
+.Rproj.user
