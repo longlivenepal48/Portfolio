@@ -7,35 +7,30 @@ title: Data Analysis
 <!-- wrapper div -->
 <div class="project-container">
     
-<div class="project-box">
+<a href="projects/data_analysis/diamond-project/diamond-project.html" target="_blank" style="text-decoration:none;color:inherit;display:block;">
+  <div class="project-box">
     <div class="project-number">Project I</div>
-    
-    <!-- New Header Section -->
     <div class="project-header" style="display: flex; align-items: flex-start; gap: 10px;">
-    <img src="assets/images/diamond.png" alt="Diamond" width="80" height="80" style="flex-shrink: 0;">
-    <div class="project-header-text">
+      <img src="assets/images/diamond.png" alt="Diamond" width="80" height="80" style="flex-shrink: 0;">
+      <div class="project-header-text">
         <h3 style="margin: 0 0 4px 0; font-size: 1.25em;">Analysis of Diamonds</h3>
         <div class="dataset-title" style="font-size: 0.95em; color: #666; margin-bottom: 4px;">Diamond Dataset</div>
         <div class="tools-used" style="font-size: 0.9em; color: #2c82c9; font-weight: 500;">Tools: R Studio</div>
+      </div>
     </div>
-</div>
     <ul>
-    <li><strong>Diamonds</strong>: <strong>attributes, price relationship analysis</strong></li>
-    <li>
+      <li><strong>Diamonds</strong>: <strong>attributes, price relationship analysis</strong></li>
+      <li>
         <strong>Findings</strong>
         <ul>
-            <li>"Fair" Cut Outperforms</li>
-            <li>Depth/Table Ratio Anomaly</li>
-            <li>Fluorescence Price Paradox</li>
+          <li>"Fair" Cut Outperforms</li>
+          <li>Depth/Table Ratio Anomaly</li>
+          <li>Fluorescence Price Paradox</li>
         </ul>
-    </li>
-</ul>
-<div class="project-link">
-        <a href="projects/data_analysis/diamond-project/diamond-project.html" target="_blank">
-            View Full Analysis
-        </a>
-    </div>
-</div>
+      </li>
+    </ul>
+  </div>
+</a>
 
 <div class="project-box">
     <div class="project-number">Project II</div>
