@@ -200,7 +200,14 @@ main ul, main ol {
 }
 
 .featured-section:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #A4B465;
+  color: #fff;
+}
+
+.featured-section:hover h3,
+.featured-section:hover p,
+.featured-section:hover a {
+  color: #fff;
 }
 
 .featured-section h3 {
