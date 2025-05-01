@@ -32,12 +32,25 @@
 <footer>
   <div class="footer-content">
     <div class="footer-left">
-      <button><span>&larr;</span> Back</button>
+      <nav aria-label="Footer navigation">
+        <button id="backBtn" aria-label="Go back to previous page">
+          <span aria-hidden="true">&larr;</span> Back
+        </button>
+      </nav>
     </div>
     <div class="footer-right">
-      &copy; 2025 Your Name
+      &copy; 2025 Anup Acharya
     </div>
   </div>
+  <script>
+    document.getElementById('backBtn').addEventListener('click', function() {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = '/'; // fallback to homepage if no history
+      }
+    });
+  </script>
 </footer>
 </body>
 </html>
