@@ -57,17 +57,30 @@ title: Data Analysis
   </div>
 </a>
 
-<div class="project-box">
+<a href="projects/data-analysis/bac-stock/bac-project.html" target="_blank" style="text-decoration:none;color:inherit;display:block;">
+  <div class="project-box">
     <div class="project-number">Project III</div>
-    <h3>Cash Flow Forecasting Model</h3>
-    <p><strong>Tools Used:</strong> Python, pandas, scikit-learn, Excel</p>
-    <p>Developed a MLM</p>
+    <div class="project-header" style="display: flex; align-items: flex-start; gap: 10px;">
+      <img src="assets/images/stock-market.png" alt="Bank of America" width="80" height="80" style="flex-shrink: 0;">
+      <div class="project-header-text">
+        <h3 style="margin: 0 0 4px 0; font-size: 1.25em;">Analysis of BAC Stock</h3>
+        <div class="dataset-title" style="font-size: 0.95em; color: #666; margin-bottom: 4px;">Kaggle BAC Dataset-Muhammad Atif Latif</div>
+        <div class="tools-used" style="font-size: 0.9em; color: #2c82c9; font-weight: 500;">Tools: R Studio</div>
+      </div>
+    </div>
     <ul>
-        <li>Created time-series</li>
-        <li>Integrated key predictor variables</li>
-        <li>Built user-friendly interface</li>
+      <li><strong>BAC Stock(1978-2025)</strong>: <strong>Stock Analysis and Prediction</strong></li>
+      <li>
+        <strong>Findings</strong>
+        <ul>
+          <li>Importance of thorough "Data Validation"</li>
+          <li>Financial time series characteristics</li>
+          <li>High volatility persistence (β1 = 0.86)</li>
+        </ul>
+      </li>
     </ul>
-</div>
+  </div>
+</a>
 
 <div class="project-box">
     <div class="project-number">Project IV</div>
