@@ -72,7 +72,7 @@ DEPENDENCIES
   jekyll-sitemap (~> 1.4.0)
   kramdown (~> 2.3.0)
   kramdown-parser-gfm (~> 1.1.0)
-  webrick (~> 1.7.0)
+  webrick (~> 1.7)
 
 BUNDLED WITH
    1.17.2

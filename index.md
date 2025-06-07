@@ -13,22 +13,22 @@ title: Home
 <div class="featured-sections-container">
     <a href="{{ '/introduction.html' | relative_url }}" class="featured-section">
         <h3><i class="fas fa-user-tie"></i> About Me</h3>
-        <p>Discover my professional background, extensive experience, and qualifications as a Chartered Accountant & CPA, with a strong focus on data-driven financial analysis.</p>
+        <p class="text-justify">Discover my professional background, extensive experience, and qualifications as a Chartered Accountant & CPA, with a strong focus on data-driven financial analysis.</p>
     </a>
 
     <a href="{{ '/data-analysis.html' | relative_url }}" class="featured-section">
         <h3><i class="fas fa-chart-line"></i> Data Analysis</h3>
-        <p>Explore projects showcasing my analytical skills using Excel, SQL, R, and Python to derive actionable financial and operational insights.</p>
+        <p class="text-justify">Explore projects showcasing my analytical skills using Excel, SQL, R, and Python to derive actionable financial and operational insights.</p>
     </a>
 
     <a href="{{ '/big-data.html' | relative_url }}" class="featured-section">
         <h3><i class="fas fa-server"></i> Big Data</h3>
-        <p>Review large-scale data implementations for financial consolidation, expense optimization, and advanced business intelligence solutions.</p>
+        <p class="text-justify">Review large-scale data implementations for financial consolidation, expense optimization, and advanced business intelligence solutions.</p>
     </a>
 
     <a href="{{ '/kaggle.html' | relative_url }}" class="featured-section">
         <h3><i class="fab fa-kaggle"></i> Kaggle Projects</h3>
-        <p>See my data science competition entries, methodologies, and results, particularly focusing on financial prediction and complex analysis.</p>
+        <p class="text-justify">See my data science competition entries, methodologies, and results, particularly focusing on financial prediction and complex analysis.</p>
     </a>
 </div>
 

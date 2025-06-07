@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{%- assign site_lang = site.lang | default: "en" -%}
+{%- assign page_lang = page.lang | default: site_lang -%}
+<html lang="{{ page_lang }}">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  {% seo %} <!-- jekyll-seo-tag will use title, description, url, baseurl from _config.yml and page front matter -->
 
-  <!-- Google Fonts: Poppins & Open Sans -->
+  <title>{{ page.title | default: site.title | escape }}</title> 
+  
+  {% seo %} <!-- Jekyll SEO Tag Plugin Output -->
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- We will choose specific fonts when we do the new style.css -->
+  <!-- Placeholder for now, will be updated with new CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -19,7 +26,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <!-- Favicon -->
-  <link rel="icon" href="{{ '/assets/images/Logo_Anup_Acharya.png' | relative_url }}" type="image/png">
+  <link rel="icon" href="{{ '/assets/images/Logo_Anup_Acharya.png' | relative_url }}" type="image/png"> 
   
   <!-- Atom Feed Link (if jekyll-feed plugin is used) -->
   {% if site.plugins contains "jekyll-feed" %}
@@ -27,75 +34,97 @@
   {% endif %}
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-content">
-      <div class="header-left">
-        <a href="{{ '/' | relative_url }}" class="logo-link">
-          <h1>{{ site.author_name | escape }}</h1> 
+  <a class="skip-to-content-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-content-wrapper">
+      <div class="site-branding">
+        <a href="{{ '/' | relative_url }}" class="site-title-link">
+          {{ site.author_name | escape }}
         </a>
-        <p class="subtitle">Chartered Accountant | CPA | Certified Analyst</p>
+        <p class="site-tagline">Data Analyst | Financial Professional</p> <!-- Placeholder, update if needed -->
       </div>
-      <div class="header-right">
-        <div class="header-contact">
-          <a class="header-link" href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer" aria-label="Email {{ site.author_name | escape }}">
-            <i class="fas fa-envelope"></i><span>Email</span>
-          </a>
-          <a class="header-link" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="{{ site.author_name | escape }}'s GitHub Profile">
-            <i class="fab fa-github"></i><span>GitHub</span>
-          </a>
-          <a class="header-link" href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="{{ site.author_name | escape }}'s LinkedIn Profile">
-            <i class="fab fa-linkedin"></i><span>LinkedIn</span>
-          </a>
-        </div>
-        <nav class="main-navigation">
-          <!-- Corrected Navigation Links -->
-          <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a>
-          <a href="{{ '/introduction.html' | relative_url }}"><i class="fas fa-user"></i> Introduction</a>
-          <a href="{{ '/data-analysis.html' | relative_url }}"><i class="fas fa-chart-simple"></i> Data Analysis</a>
-          <a href="{{ '/big-data.html' | relative_url }}"><i class="fas fa-database"></i> Big Data</a>
-          <a href="{{ '/kaggle.html' | relative_url }}"><i class="fab fa-kaggle"></i> Kaggle</a>
-        </nav>
+      <nav class="main-navigation" aria-label="Main Navigation">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="primary-menu" class="nav-menu">
+          <li><a href="{{ '/' | relative_url }}"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+          <li><a href="{{ '/introduction.html' | relative_url }}"><i class="fas fa-user" aria-hidden="true"></i> Introduction</a></li>
+          <li><a href="{{ '/data-analysis.html' | relative_url }}"><i class="fas fa-chart-pie" aria-hidden="true"></i> Data Analysis</a></li> 
+          <li><a href="{{ '/big-data.html' | relative_url }}"><i class="fas fa-database" aria-hidden="true"></i> Big Data</a></li>
+          <li><a href="{{ '/kaggle.html' | relative_url }}"><i class="fab fa-kaggle" aria-hidden="true"></i> Kaggle</a></li>
+        </ul>
+      </nav>
+      <div class="header-social-links">
+        <a href="mailto:{{ site.email }}" class="social-icon" aria-label="Email {{ site.author_name | escape }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/{{ site.github_username }}" class="social-icon" aria-label="{{ site.author_name | escape }}'s GitHub Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="social-icon" aria-label="{{ site.author_name | escape }}'s LinkedIn Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </header>
 
-  <main class="main-content">
-    <div class="container">
+  <main class="main-content-area" id="main-content">
+    <div class="container page-content">
       {{ content }}
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <button id="backBtn" aria-label="Go back to previous page">
-          <i class="fas fa-arrow-left"></i> Back
-        </button>
+    <div class="container footer-content-wrapper">
+      <div class="footer-navigation">
+        <!-- Optional: Add a few key links here if desired -->
+        <!-- <a href="{{ '/' | relative_url }}">Home</a> -->
+        <!-- <a href="#">Privacy Policy</a> -->
       </div>
-      <div class="footer-right">
-        © <span id="currentYear"></span> {{ site.author_name | escape }}. All rights reserved. 
+      <div class="footer-copyright">
+        <p>© <span id="currentYear"></span> {{ site.author_name | escape }}. All rights reserved.</p>
+        <!-- Optional: <p>Designed with <i class="fas fa-heart" style="color: var(--color-accent-vibrant);"></i></p> -->
       </div>
+       <div class="footer-back-button">
+         <button id="backBtn" aria-label="Go back to previous page">
+           <i class="fas fa-arrow-left"></i> Back
+         </button>
+       </div>
     </div>
   </footer>
 
-  <script>
-    // Back button functionality
-    const backBtn = document.getElementById('backBtn');
-    if (backBtn) {
-      backBtn.addEventListener('click', function() {
-        if (window.history.length > 1 && document.referrer !== '' && document.referrer !== window.location.href) {
-          window.history.back();
-        } else {
-          window.location.href = '{{ "/" | relative_url }}'; 
-        }
-      });
-    }
+<script>
+  // Basic Menu Toggle for Mobile
+  const menuToggle = document.querySelector('.menu-toggle');
+  const primaryMenu = document.querySelector('#primary-menu');
+  if (menuToggle && primaryMenu) {
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      primaryMenu.classList.toggle('is-active');
+      // Optional: Change icon to X on open
+      menuToggle.classList.toggle('is-active'); 
+    });
+  }
 
-    // Update copyright year
-    const currentYearSpan = document.getElementById('currentYear');
-    if (currentYearSpan) {
-      currentYearSpan.textContent = new Date().getFullYear();
-    }
-  </script>
+  // Back button functionality
+  const backBtn = document.getElementById('backBtn');
+  if (backBtn) {
+    backBtn.addEventListener('click', function() {
+      if (window.history.length > 1 && document.referrer !== '' && document.referrer !== window.location.href) {
+        window.history.back();
+      } else {
+        window.location.href = '{{ "/" | relative_url }}'; 
+      }
+    });
+  }
+
+  // Update copyright year
+  const currentYearSpan = document.getElementById('currentYear');
+  if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
+  }
+</script>
 </body>
 </html>

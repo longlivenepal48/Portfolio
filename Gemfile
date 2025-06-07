@@ -1,18 +1,18 @@
 # Gemfile
 source "https://rubygems.org"
 
-# Specify Jekyll version.
+# Jekyll and its core dependencies
+# Using a specific, stable version of Jekyll 3.9.x often works well with GH Pages actions
+gem "jekyll", "~> 3.9.3"
 
-gem "jekyll", "~> 3.9.3" # Let bundler pick 3.9.3, 3.9.4 or 3.9.5 if available
+# Markdown processing
+gem "kramdown", "~> 2.3.0"         # Markdown converter
+gem "kramdown-parser-gfm", "~> 1.1.0" # For GitHub Flavored Markdown
 
-# Jekyll plugins listed in your _config.yml
-gem "jekyll-seo-tag", "~> 2.8.0"
-gem "jekyll-feed", "~> 0.17.0"
-gem "jekyll-sitemap", "~> 1.4.0"
+# Jekyll plugins as listed in _config.yml
+gem "jekyll-seo-tag", "~> 2.8.0"    # For SEO meta tags
+gem "jekyll-feed", "~> 0.17.0"       # For generating an Atom feed
+gem "jekyll-sitemap", "~> 1.4.0"    # For generating a sitemap.xml
 
-# Markdown parsers for Jekyll.
-gem "kramdown", "~> 2.3.0" # Bundler might pick a newer 2.x like 2.5.1 if compatible
-gem "kramdown-parser-gfm", "~> 1.1.0"
-
-# Required for `jekyll serve` in Ruby 3+ (good practice for local dev)
-gem "webrick", "~> 1.7.0" # Bundler can pick 1.7.x, 1.8.x, 1.9.x
+# Required for `jekyll serve` with Ruby 3.0+ (good for local development)
+gem "webrick", "~> 1.7"

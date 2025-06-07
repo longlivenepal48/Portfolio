@@ -1,48 +1,45 @@
 # _config.yml
 
-# Site settings
-# These are used to personalize your new site.
-title: "CA. Anup Acharya - Data Science Portfolio" # Full title for browser, SEO, and jekyll-seo-tag
-author_name: "CA. Anup Acharya" # Shorter name for display in header/footer
+# Site Meta Settings
+title: "Anup Acharya | Data Science Portfolio" # Used by jekyll-seo-tag and as fallback title
+author_name: "CA. Anup Acharya" # For display in header/footer
 email: "longlivenepal48@gmail.com"
-description: >- # this means to ignore newlines until "baseurl:"
-  Anup Acharya's professional data science portfolio, showcasing CV, 
-  data analysis projects, big data expertise, and Kaggle competition entries.
-lang: "en" # Site-wide language, BCP 47 tag. Used by default.html and jekyll-seo-tag.
+description: "Professional data science portfolio of Anup Acharya, showcasing data analysis, big data, and Kaggle projects. Expertise in financial analytics, R, Python, and SQL."
+lang: "en" # Site-wide language (BCP 47 tag)
 
 # URL and BaseURL settings - CRITICAL for GitHub Pages
-# Your site is hosted at: https://longlivenepal48.github.io/portfolio/
-url: "https://longlivenepal48.github.io" # The root domain for your GitHub Pages. DO NOT include /portfolio here.
-baseurl: "/portfolio" # The subpath for your specific repository. MUST start with a forward slash.
+# Live site: https://longlivenepal48.github.io/portfolio/
+url: "https://longlivenepal48.github.io"
+baseurl: "/portfolio"
 
-# GitHub specific (optional, but can be used by themes or plugins)
+# GitHub User/Repo (Optional, can be used by plugins)
 github_username: "longlivenepal48"
-# github_repo: "portfolio" # This can be inferred, not strictly needed if baseurl is correct
 
-# Social links (used in _layouts/default.html and potentially by jekyll-seo-tag)
-# For jekyll-seo-tag, you can also specify twitter:username, facebook:app_id etc.
-# See jekyll-seo-tag documentation for more options.
-linkedin_username: "ca-anup-acharya-761737ba" # Just the username part from the LinkedIn URL
+# Social Profiles (Just usernames/IDs as needed by links)
+linkedin_username: "ca-anup-acharya-761737ba"
 
 # Build settings
 markdown: kramdown
-theme: null # We are using custom styling, not a pre-built Jekyll theme.
+kramdown:
+  input: GFM # Use GitHub Flavored Markdown for better compatibility
+  hard_wrap: false
+  syntax_highlighter_opts:
+    disable: true # If you're not using Jekyll's default syntax highlighting
 
-# Plugins - Ensure these are correctly listed and also in your Gemfile
+theme: null # We are using custom styling
+
+# Plugins
 plugins:
-  - jekyll-feed    # Generates an Atom feed for your posts (if you add posts)
-  - jekyll-sitemap # Generates a sitemap.xml file for better SEO
-  - jekyll-seo-tag # Generates comprehensive SEO meta tags
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
-# Exclude from processing.
-# The following items will not be processed by Jekyll.
+# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules/   # Folder for Node.js dependencies, if any
-  - vendor/         # Standard folder for Bundler-installed gems if using --path
-  - README.md       # Typically not processed into an HTML page
-  - LICENSE.md      # If you have a LICENSE.md and don't want it processed
-  - "*.Rmd"       # Uncomment if Rmd files are ONLY for generating HTML separately 
-  - "*.Rproj"      # R project files, not needed in the site
-  - ".DS_Store"    # macOS system file, not needed in the site
+  - node_modules/
+  - vendor/
+  - README.md
+  - LICENSE.md # If you have one
+  - "*.Rmd" # Uncomment if Rmd files are ONLY for rendering HTML separately
