@@ -31,7 +31,6 @@
     <div class="container header-content">
       <div class="header-left">
         <a href="{{ '/' | relative_url }}" class="logo-link">
-          <!-- Using author_name from _config.yml for the header display -->
           <h1>{{ site.author_name | escape }}</h1> 
         </a>
         <p class="subtitle">Chartered Accountant | CPA | Certified Analyst</p>
@@ -49,11 +48,12 @@
           </a>
         </div>
         <nav class="main-navigation">
+          <!-- Corrected Navigation Links -->
           <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a>
-          <a href="{{ '/introduction/' | relative_url }}"><i class="fas fa-user"></i> Introduction</a>
-          <a href="{{ '/data-analysis/' | relative_url }}"><i class="fas fa-chart-simple"></i> Data Analysis</a>
-          <a href="{{ '/big-data/' | relative_url }}"><i class="fas fa-database"></i> Big Data</a>
-          <a href="{{ '/kaggle/' | relative_url }}"><i class="fab fa-kaggle"></i> Kaggle</a>
+          <a href="{{ '/introduction.html' | relative_url }}"><i class="fas fa-user"></i> Introduction</a>
+          <a href="{{ '/data-analysis.html' | relative_url }}"><i class="fas fa-chart-simple"></i> Data Analysis</a>
+          <a href="{{ '/big-data.html' | relative_url }}"><i class="fas fa-database"></i> Big Data</a>
+          <a href="{{ '/kaggle.html' | relative_url }}"><i class="fab fa-kaggle"></i> Kaggle</a>
         </nav>
       </div>
     </div>
@@ -86,7 +86,6 @@
         if (window.history.length > 1 && document.referrer !== '' && document.referrer !== window.location.href) {
           window.history.back();
         } else {
-          // Fallback to homepage, ensuring baseurl is respected
           window.location.href = '{{ "/" | relative_url }}'; 
         }
       });
