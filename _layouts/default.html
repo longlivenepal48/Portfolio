@@ -2,55 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CA. Anup Acharya | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/fonts.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- If using jekyll-seo-tag, this replaces manual title and meta tags -->
+  {% if site.plugins contains "jekyll-seo-tag" %}
+    {% seo %}
+  {% else %}
+    <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta property="og:image" content="{{ '/assets/images/Logo_Anup_Acharya.png' | absolute_url }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+    <meta property="twitter:title" content="{{ page.title | default: site.title | escape }}">
+    <meta property="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta property="twitter:image" content="{{ '/assets/images/Logo_Anup_Acharya.png' | absolute_url }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="icon" href="{{ '/assets/images/Logo_Anup_Acharya.png' | relative_url }}" type="image/png"> <!-- Favicon -->
+  
+  {% if site.plugins contains "jekyll-feed" %}
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  {% endif %}
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <h1>CA. Anup Acharya</h1>
-      <div class="subtitle">Chartered Accountant | CPA | Certified Analyst</div>
-      <div class="header-contact">
-        <a class="header-link" href="mailto: longlivenepal48@gmail.com" target="_blank"><i class="fa-envelope"></i> Email</a>
-        <a class="header-link" href="https://github.com/longlivenepal48.github.io" target="_blank"><i class="fa-github"></i> GitHub</a>
-        <a class="header-link" href="https://linkedin.com/in/ca-anup-acharya-761737ba" target="_blank"><i class="fa-linkedin"></i> LinkedIn</a>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="header-left">
+        <a href="{{ '/' | relative_url }}" class="logo-link">
+          <h1>{{ site.title | split: " - " | first }}</h1> <!-- Assumes site.title is "CA. Anup Acharya - Data Science Portfolio" -->
+        </a>
+        <p class="subtitle">Chartered Accountant | CPA | Certified Analyst</p>
       </div>
-      <nav>
-        <a href="index"><i class="fa-home"></i> Home</a>
-        <a href="introduction"><i class="fa-user"></i> Introduction</a>
-        <a href="data-analysis"><i class="fa-chart-bar"></i> Data Analysis</a>
-        <a href="big-data"><i class="fa-database"></i> Big Data</a>
-        <a href="kaggle"><i class="fa-kaggle"></i> Kaggle</a>
-      </nav>
+      <div class="header-right">
+        <div class="header-contact">
+          <a class="header-link" href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer" aria-label="Email Anup Acharya">
+            <i class="fas fa-envelope"></i><span>Email</span>
+          </a>
+          <a class="header-link" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="Anup Acharya's GitHub Profile">
+            <i class="fab fa-github"></i><span>GitHub</span>
+          </a>
+          <a class="header-link" href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="Anup Acharya's LinkedIn Profile">
+            <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+          </a>
+        </div>
+        <nav class="main-navigation">
+          <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a>
+          <a href="{{ '/introduction' | relative_url }}"><i class="fas fa-user"></i> Introduction</a>
+          <a href="{{ '/data-analysis' | relative_url }}"><i class="fas fa-chart-simple"></i> Data Analysis</a>
+          <a href="{{ '/big-data' | relative_url }}"><i class="fas fa-database"></i> Big Data</a>
+          <a href="{{ '/kaggle' | relative_url }}"><i class="fab fa-kaggle"></i> Kaggle</a>
+        </nav>
+      </div>
     </div>
   </header>
-  <main>
-    {{ content }}
+
+  <main class="main-content">
+    <div class="container">
+      {{ content }}
+    </div>
   </main>
-<footer>
-  <div class="footer-content">
-    <div class="footer-left">
-      <nav aria-label="Footer navigation">
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
         <button id="backBtn" aria-label="Go back to previous page">
-          <span aria-hidden="true">&larr;</span> Back
+          <i class="fas fa-arrow-left"></i> Back
         </button>
-      </nav>
+      </div>
+      <div class="footer-right">
+        © <span id="currentYear"></span> {{ site.title | split: " - " | first }}. All rights reserved. <!-- Or use a specific author name variable -->
+      </div>
     </div>
-    <div class="footer-right">
-      &copy; 2025 Anup Acharya
-    </div>
-  </div>
+  </footer>
+
   <script>
-    document.getElementById('backBtn').addEventListener('click', function() {
-      if (window.history.length > 1) {
-        window.history.back();
-      } else {
-        window.location.href = '/'; // fallback to homepage if no history
-      }
-    });
+    // Back button functionality
+    const backBtn = document.getElementById('backBtn');
+    if (backBtn) {
+      backBtn.addEventListener('click', function() {
+        if (window.history.length > 1 && document.referrer !== '' && document.referrer !== window.location.href) {
+          window.history.back();
+        } else {
+          window.location.href = '{{ "/" | relative_url }}'; // fallback to homepage
+        }
+      });
+    }
+
+    // Update copyright year
+    const currentYearSpan = document.getElementById('currentYear');
+    if (currentYearSpan) {
+      currentYearSpan.textContent = new Date().getFullYear();
+    }
   </script>
-</footer>
 </body>
 </html>

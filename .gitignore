@@ -1,3 +1,5 @@
+# Existing User Rules:
+
 # System files
 .DS_Store
 Thumbs.db
@@ -5,7 +7,7 @@ Thumbs.db
 
 # Temporary files
 *.log
-*.cache
+*.cache # Note: .jekyll-cache/ is more specific for Jekyll
 *.tmp
 
 # Sensitive data
@@ -18,3 +20,20 @@ Thumbs.db
 *.pyc
 __pycache__/
 .Rproj.user
+
+# Added Jekyll & Bundler specific rules:
+
+# Jekyll build output
+_site/
+
+# Jekyll specific cache/metadata
+.sass-cache/
+.jekyll-cache/ # More specific than just *.cache for Jekyll
+.jekyll-metadata
+
+# Bundler files
+.bundle/
+vendor/ # Covers vendor/bundle, vendor/cache, vendor/gems, vendor/ruby
+Gemfile.lock # Often committed, but can be ignored if all collaborators manage their own lock file. 
+             # For solo projects or when deploying via GitHub Pages, it's fine to commit it.
+             # If you decide to commit Gemfile.lock, remove it from here.

@@ -1,34 +1,65 @@
 # Anup Acharya's Data Science Portfolio
 
 ## Overview
-This repository contains my professional data science portfolio, showcasing my CV, data analysis projects, big data expertise, and Kaggle competition entries.
+
+Welcome to my professional data science portfolio. This repository showcases my CV, a collection of data analysis projects, demonstrations of my big data expertise, and entries from Kaggle competitions. The portfolio is built using Jekyll and hosted on GitHub Pages.
+
+**View the live portfolio: [https://longlivenepal48.github.io/anup_portfolio/](https://longlivenepal48.github.io/anup_portfolio/)**
 
 ## Portfolio Sections
-- **Introduction**: Professional CV and background
-- **Data Analysis**: Collection of data analysis projects
-- **Big Data**: Projects focusing on big data technologies
-- **Kaggle**: Kaggle competition submissions and results
+
+This portfolio is organized into the following key sections:
+
+-   **Introduction**: My professional CV, background, skills, and experience.
+-   **Data Analysis**: A curated collection of projects demonstrating data manipulation, analysis, and visualization.
+-   **Big Data**: Projects focused on leveraging big data technologies for insights and solutions.
+-   **Kaggle**: Submissions, methodologies, and results from my participation in Kaggle data science competitions.
 
 ## Technologies Used
-- GitHub Pages
-- Jekyll (static site generator)
-- HTML/CSS
-- Markdown
+
+This portfolio website is built and styled using:
+
+-   **GitHub Pages**: For hosting the static site.
+-   **Jekyll**: A static site generator.
+-   **HTML5 & CSS3**: For structure and modern styling, including CSS Variables and Flexbox/Grid layouts.
+-   **Markdown**: For content creation.
+-   **Font Awesome (CDN)**: For iconography.
 
 ## Setup Instructions
-To view this portfolio:
-1. Visit [GitHub Pages](https://longlivenepal48.github.io/anup_portfolio/)
 
-To run this portfolio locally:
-1. Clone this repository
-2. Install Jekyll (if not already installed): `gem install jekyll bundler`
-3. Navigate to the repository directory
-4. Run `bundle install`
-5. Run `bundle exec jekyll serve`
-6. Open your browser and go to `http://localhost:4000`
+### To View This Portfolio Online:
+
+1.  Simply visit the live site: [https://longlivenepal48.github.io/anup_portfolio/](https://longlivenepal48.github.io/anup_portfolio/)
+
+### To Run This Portfolio Locally:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/longlivenepal48/anup_portfolio.git
+    cd anup_portfolio
+    ```
+2.  **Install Jekyll and Bundler (if not already installed):**
+    Refer to the official Jekyll installation guide for your operating system: [https://jekyllrb.com/docs/installation/](https://jekyllrb.com/docs/installation/)
+    A common method is:
+    ```bash
+    gem install jekyll bundler
+    ```
+3.  **Install dependencies:**
+    Navigate to the repository directory and run:
+    ```bash
+    bundle install
+    ```
+4.  **Serve the site:**
+    Run the Jekyll development server:
+    ```bash
+    bundle exec jekyll serve --livereload
+    ```
+5.  **Open in your browser:**
+    Go to `http://localhost:4000`
 
 ## Project Data Structure
-```
+
+The simplified project structure after recent updates:
 portfolio
   ├── _includes
   │      └ _includes-README.md
@@ -74,13 +105,18 @@ portfolio
   ├── index.md
   ├── introduction.md
   └── kaggle.md
-```
+
+
 ---
 
 ## Contact Information
-- [Email](mailto:longlivenepal48@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/ca-anup-acharya-761737ba/)
-- [GitHub](https://github.com/longlivenepal48)
+
+I'm always open to discussing new opportunities, collaborations, or sharing insights.
+
+-   **Email:** [longlivenepal48@gmail.com](mailto:longlivenepal48@gmail.com)
+-   **LinkedIn:** [linkedin.com/in/ca-anup-acharya-761737ba](https://www.linkedin.com/in/ca-anup-acharya-761737ba/)
+-   **GitHub:** [github.com/longlivenepal48](https://github.com/longlivenepal48)
 
 ## License
-This project is open licensed - see the LICENSE file for details.
+
+This project is open-licensed. Please see the `LICENSE` file for more details (assuming you have one, if not, consider adding one like MIT License).
