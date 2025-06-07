@@ -7,15 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Good to have early for browser compatibility -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for responsiveness -->
 
-  <title>{{ page.title | default: site.title | escape }}</title>
+  <title>{{ page.title | default: site.title | escape }}</title> 
   
-  {% seo %}
+  {% seo %} <!-- Jekyll SEO Tag Plugin Output -->
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter for body, Roboto Slab for headings -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;600;700;800&display=swap" rel="stylesheet">
-
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -42,7 +41,7 @@
         <a href="{{ '/' | relative_url }}" class="site-title-link">
           {{ site.author_name | escape }}
         </a>
-        <p class="site-tagline">Data Analyst | Financial Professional</p> <!-- Consider moving to _config.yml if you change it often -->
+        <p class="site-tagline">Data Analyst | Financial Professional</p> <!-- Consider moving to _config.yml: {{ site.tagline }} -->
       </div>
       <nav class="main-navigation" aria-label="Main Navigation">
         <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">

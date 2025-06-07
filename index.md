@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Home
+# You can add a specific page description for SEO if desired for the homepage:
+# description: "Welcome to Anup Acharya's Data Science Portfolio. Explore projects in data analysis, big data, and Kaggle competition entries."
 ---
 
 # Welcome to My Professional Portfolio

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Data Analysis Projects
+# description: "A collection of Anup Acharya's data analysis projects demonstrating skills in R, Python, SQL, and data visualization for deriving insights."
 ---
 
 # Data Analysis Projects
@@ -62,10 +63,11 @@ title: Data Analysis Projects
     </div>
   </a>
 
+  <!-- Project IV - Card not wrapped in a link -->
   <div class="project-box no-link"> 
     <span class="project-number">Project IV</span>
     <div class="project-header"> 
-       <img src="{{ '/assets/images/citybike_icon.png' | relative_url }}" alt="City Bike Icon"> <!-- ADD YOUR ICON IMAGE -->
+       <img src="{{ '/assets/images/citybike_icon.png' | relative_url }}" alt="City Bike Icon"> <!-- ADD YOUR ICON IMAGE and ensure it exists -->
        <div class="project-header-text">
           <h3>City Bikes Demand Forecasting</h3>
           <div class="tools-used">Tech: Python (Pandas, Scikit-learn), Excel</div>

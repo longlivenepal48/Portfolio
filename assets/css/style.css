@@ -1,11 +1,11 @@
-/* style.css - Portfolio Overhaul v2.1 - Global Justification */
+/* style.css - Portfolio Overhaul v2.2 - Global Justification for P and LI */
 
 /* --------------------
  * Table of Contents
  * --------------------
  * 1.  CSS Variables & Font Imports
  * 2.  Global Resets & Base Styles
- * 3.  Typography (Global P Justification)
+ * 3.  Typography (Global P & LI Justification)
  * 4.  Layout & Container
  * 5.  Header & Navigation (Desktop & Mobile)
  * 6.  Main Content & Page Titles
@@ -24,7 +24,8 @@
  * --------------------
  */
 
-/* Google Fonts are now imported in _layouts/default.html */
+/* Google Fonts are imported in _layouts/default.html */
+/* Selected fonts: 'Roboto Slab' for headings, 'Inter' for body */
 
 :root {
   /* Color Palette - Professional, Modern, with a touch of warmth */
@@ -115,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--font-line-height-heading);
   margin-bottom: calc(var(--spacing-unit) * 0.75);
   font-weight: 700;
+  /* Headings are generally not justified */
 }
 
 h1 { font-size: 2.5rem; margin-bottom: var(--spacing-unit); } 
@@ -122,16 +124,16 @@ h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; } 
 h4 { font-size: 1.25rem; } 
 
-p {
+p { /* Global justification for paragraphs */
   margin-bottom: var(--spacing-unit);
-  text-align: justify; /* GLOBAL JUSTIFICATION FOR PARAGRAPHS */
+  text-align: justify;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
 
-a {
+a { /* General link styling */
   color: var(--color-secondary);
   text-decoration: none;
   transition: var(--transition-fast);
@@ -141,19 +143,30 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-ul, ol {
+ul, ol { /* Base styling for lists */
   margin-bottom: var(--spacing-unit);
-  padding-left: calc(var(--spacing-unit) * 1.5);
-}
-li {
-  margin-bottom: calc(var(--spacing-unit) * 0.25);
-  /* If <li> contains <p>, the <p> will be justified. 
-     If <li> contains just text, it won't be justified by the global p rule.
-     If you want <li> text itself justified, add text-align:justify to li directly.
-  */
+  padding-left: calc(var(--spacing-unit) * 1.5); /* Standard indent */
 }
 
-strong { font-weight: 600; }
+li { /* Base styling for list items */
+  margin-bottom: calc(var(--spacing-unit) * 0.25);
+}
+
+/* Justify text directly inside list items within the main content area */
+/* Excludes navigation menus or other specific lists if they have distinct classes */
+.main-content-area ul:not(.nav-menu) > li,
+.main-content-area ol > li {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+/* Note: If a <li> contains a <p>, that <p> is already covered by the global 'p' rule. */
+/* This targets text that is a direct child of <li>. */
+
+
+strong { font-weight: 600; } /* Use semibold for strong */
 
 blockquote {
   border-left: 4px solid var(--color-warm-accent);
@@ -220,7 +233,8 @@ blockquote {
   display: flex;
 }
 .main-navigation .nav-menu li {
-  margin-left: calc(var(--spacing-unit) * 1.25); /* No margin on first item handled by flex */
+  margin-left: calc(var(--spacing-unit) * 1.25); 
+  margin-bottom: 0; /* Override default li margin */
 }
 .main-navigation .nav-menu a {
   font-family: var(--font-family-body);
@@ -316,15 +330,14 @@ blockquote {
   border-radius: 2px;
 }
 
-.section-intro {
+.section-intro { /* Paragraphs inside here will be justified */
   font-size: 1.1rem;
   color: var(--color-text-muted);
-  text-align: center; /* Center the intro paragraph block */
+  text-align: center; /* Center the block, text inside will be justified */
   max-width: 700px;
   margin: 0 auto calc(var(--spacing-unit) * 2.5);
   line-height: 1.8;
 }
-/* Paragraphs within .section-intro will be justified by the global p rule */
 
 
 /* --------------------
@@ -388,46 +401,48 @@ a.project-box-link:focus-within {
   padding: 0.25rem;
   background-color: var(--color-light-accent); 
 }
-.project-header-text h3 {
+.project-header-text h3 { /* Not justified */
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 0.1rem;
   line-height: 1.2;
+  text-align: left; /* Ensure headings in cards are not justified */
 }
 .project-header-text .tools-used,
-.project-header-text .dataset-title {
+.project-header-text .dataset-title { /* Not justified */
   font-size: 0.8rem;
   color: var(--color-text-muted);
   line-height: 1.3;
+  text-align: left;
 }
 
-.project-box .project-objective { /* Paragraphs here will be justified */
+.project-box .project-objective { /* This is a <p> tag, will be justified */
   font-size: 0.95rem;
   color: var(--color-text-base);
   margin-bottom: var(--spacing-unit); 
-  flex-grow: 1; /* Allows objective to take space before key-result */
+  flex-grow: 1; 
 }
 .project-box .project-objective strong {
   font-weight: 600;
   color: var(--color-primary);
 }
 
-.project-box .project-key-result { /* Paragraphs here will be justified */
+.project-box .project-key-result { /* This is a <p> tag, will be justified */
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-secondary);
-  margin-top: auto; /* Pushes to bottom if objective is short */
+  margin-top: auto; 
   padding-top: var(--spacing-unit);
   border-top: 1px dashed var(--color-border);
 }
 
-.project-box .project-details-indicator {
+.project-box .project-details-indicator { /* Not justified */
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-accent);
   text-align: right;
-  margin-top: var(--spacing-unit); /* Space above indicator */
+  margin-top: var(--spacing-unit); 
   display: block;
   text-decoration: none;
   transition: var(--transition-fast);
@@ -477,19 +492,20 @@ a.featured-section:focus-within {
 a.featured-section:focus-within {
   box-shadow: var(--shadow-lg), 0 0 0 2px var(--color-secondary);
 }
-.featured-section h3 {
+.featured-section h3 { /* Not justified */
   font-size: 1.3rem;
   color: var(--color-primary);
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
+  text-align: left;
 }
 .featured-section h3 i {
   color: var(--color-secondary);
   margin-right: 0.5em;
   font-size: 1.2em;
 }
-.featured-section p { /* Paragraphs here will be justified by global p rule */
+.featured-section p { /* This <p> will be justified by global rule */
   font-size: 0.9rem;
   color: var(--color-text-muted);
   line-height: 1.6;
@@ -518,11 +534,12 @@ a.featured-section:focus-within {
   border: 3px solid var(--color-surface);
   box-shadow: var(--shadow-md);
 }
-.profile-info h2 {
+.profile-info h2 { /* Not justified */
   font-size: 2rem; 
   margin-bottom: 0.1rem;
+  text-align: left;
 }
-.profile-info .tagline {
+.profile-info .tagline { /* This is a <p>, will be justified */
   font-size: 1rem;
   color: var(--color-secondary);
   font-weight: 500;
@@ -538,7 +555,7 @@ a.featured-section:focus-within {
 .introduction-contact-icons a:hover img {
   opacity: 1; transform: scale(1.1);
 }
-.intro-pitch { /* This is a <p> tag, so it will be justified */
+.intro-pitch { /* This is a <p>, will be justified */
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--color-text-base);
@@ -549,20 +566,17 @@ a.featured-section:focus-within {
   box-shadow: var(--shadow-sm);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
-.main-content ul li { 
-  padding-left: 0.5em;
-  position: relative;
-}
 /* Custom bullets for lists in main content for better visual */
+/* Text inside these <li> will be justified by the new rule */
 .main-content-area ul:not(.nav-menu) > li::before {
   content: "\2022"; 
   color: var(--color-secondary);
   font-weight: bold;
   display: inline-block;
   width: 1em;
-  margin-left: -1.2em; 
-  position: absolute;
-  left: 0.2em; /* Adjust as needed */
+  margin-left: -1.5em; /* Adjust to align with padding of ul */
+  /* position: absolute; /* Removing absolute positioning for flow */
+  /* left: 0.2em; */
 }
 
 
@@ -584,7 +598,7 @@ a.featured-section:focus-within {
   flex-wrap: wrap;
   gap: var(--spacing-unit);
 }
-.footer-copyright p {
+.footer-copyright p { /* This <p> will be justified */
   margin: 0;
 }
 .footer-back-button button#backBtn {
@@ -620,8 +634,8 @@ a.featured-section:focus-within {
 .text-center { text-align: center !important; }
 .text-left { 
   text-align: left !important;
-  -webkit-hyphens: none !important; 
-  hyphens: none !important; /* If you want to specifically disable justification and hyphenation */
+  -webkit-hyphens: none !important;
+  hyphens: none !important;
 }
 
 
@@ -659,10 +673,9 @@ a.featured-section:focus-within {
   outline-offset: 2px;
   box-shadow: 0 0 0 4px rgba(var(--color-secondary-rgb), 0.3); 
 }
-/* Remove outline for elements where focus is handled by box-shadow (cards) */
 a.project-box-link:focus-visible,
 a.featured-section:focus-visible {
-  outline: none;
+  outline: none; /* Custom focus already handled by focus-within on parent */
 }
 
 
@@ -675,28 +688,26 @@ a.featured-section:focus-visible {
     display: block;
   }
   .main-navigation {
-    width: 100%; /* Allow it to take full width before collapsing items */
-    order: 3; /* Place it below branding and social links in flex order */
-    margin-top: var(--spacing-unit); /* Space when it wraps */
+    width: 100%; 
+    order: 3; 
+    margin-top: var(--spacing-unit); 
   }
   .main-navigation .nav-menu {
     display: none; 
     flex-direction: column;
-    width: 100%; /* Full width for dropdown */
-    /* Position absolute styling handled by JS toggle or specific CSS if needed */
-    /* For now, let's assume it just stacks */
+    width: 100%; 
   }
   .main-navigation .nav-menu.is-active {
     display: flex; 
-    position: absolute; /* Position it absolutely for dropdown */
-    top: 100%; /* Below the header */
+    position: absolute; 
+    top: 100%; 
     left: 0;
     right: 0;
     background-color: var(--color-surface);
     box-shadow: var(--shadow-md);
     padding: var(--spacing-unit) 0;
     border-top: 1px solid var(--color-border);
-    z-index: 999; /* Ensure it's above content but below sticky header if header z-index is higher */
+    z-index: 999; 
   }
   .main-navigation .nav-menu li {
     margin-left: 0;
@@ -714,13 +725,13 @@ a.featured-section:focus-visible {
   }
   .header-social-links {
     margin-left: auto; 
-    padding-right: 0; /* No extra padding if toggle is on the right of branding */
+    padding-right: 0; 
   }
   .header-content-wrapper {
-     flex-wrap: wrap; /* Allow items to wrap */
+     flex-wrap: wrap; 
   }
   .site-branding {
-    flex-grow: 1; /* Allow branding to take available space */
+    flex-grow: 1; 
   }
 }
 
@@ -732,9 +743,10 @@ a.featured-section:focus-visible {
   .profile-header { flex-direction: column; text-align: center; }
   .profile-info { text-align: center; }
   .introduction-contact-icons { justify-content: center; }
-  .footer-content-wrapper { flex-direction: column; text-align: center; }
-  .footer-copyright { margin-bottom: var(--spacing-unit); order: 1; /* Copyright first */}
-  .footer-back-button { order: 2; } /* Back button after copyright */
+  .footer-content-wrapper { flex-direction: column; text-align: center; gap: var(--spacing-unit) * 1.5; }
+  .footer-copyright { margin-bottom: 0; order: 1; }
+  .footer-back-button { order: 2; }
+  .footer-navigation { order: 3; }
 }
 
 @media (max-width: 480px) {
@@ -743,7 +755,7 @@ a.featured-section:focus-visible {
   .site-branding .site-tagline { font-size: 0.75rem; }
   .project-header img { width: 40px; height: 40px; }
   .project-header-text h3 { font-size: 1.1rem; }
-  .header-social-links { display: none; /* Hide social links on very small screens to save space */ }
+  .header-social-links { display: none; }
 }
 
 
@@ -770,7 +782,7 @@ a.featured-section:focus-visible {
     --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
 
-    --color-secondary-rgb: 130, 192, 231; /* RGB for dark mode #82C0E7 */
+    --color-secondary-rgb: 130, 192, 231; 
   }
 
   body {
@@ -782,6 +794,9 @@ a.featured-section:focus-visible {
 
   h1, h2, h3, h4, h5, h6 { color: var(--color-primary); }
   strong { color: var(--color-primary); }
+
+  code, pre { background-color: var(--color-light-accent); color: var(--color-text-base); border-color: var(--color-border); }
+  blockquote { background-color: var(--color-light-accent); border-left-color: var(--color-warm-accent); color: var(--color-text-muted); }
 
   .site-header { background-color: var(--color-surface); border-bottom-color: var(--color-border); }
   .site-branding .site-title-link { color: var(--color-primary); }
@@ -798,7 +813,6 @@ a.featured-section:focus-visible {
   .header-social-links .social-icon:hover { color: var(--color-secondary); }
   .menu-toggle { color: var(--color-primary); }
   .menu-toggle .icon-bar { background-color: var(--color-primary); }
-  /* Mobile nav dropdown bg in dark mode */
   @media (max-width: 850px) {
     .main-navigation .nav-menu.is-active { background-color: var(--color-surface); border-top-color: var(--color-border); }
     .main-navigation .nav-menu a { border-bottom-color: var(--color-border); }
@@ -810,7 +824,7 @@ a.featured-section:focus-visible {
 
   .project-box { background-color: var(--color-surface); border-color: var(--color-border); }
   div.project-box.no-link { background-color: var(--color-surface); border-color: var(--color-border); }
-  .project-header img { background-color: var(--color-light-accent); } /* Use a darker bg for icons if main bg is too dark */
+  .project-header img { background-color: var(--color-light-accent); } 
   .project-header-text h3 { color: var(--color-primary); }
   .project-header-text .tools-used,
   .project-header-text .dataset-title { color: var(--color-text-muted); }
@@ -836,7 +850,4 @@ a.featured-section:focus-visible {
   .site-footer { background-color: var(--color-primary); color: var(--color-text-on-dark); } 
   .footer-back-button button#backBtn { background-color: var(--color-secondary); color: var(--color-background); }
   .footer-back-button button#backBtn:hover { background-color: var(--color-accent); }
-
-  code, pre { background-color: var(--color-light-accent); color: var(--color-text-base); border-color: var(--color-border); }
-  blockquote { background-color: var(--color-light-accent); border-left-color: var(--color-warm-accent); color: var(--color-text-muted); }
 }
