@@ -1,11 +1,11 @@
-/* style.css - Portfolio Overhaul v2.0 */
+/* style.css - Portfolio Overhaul v2.1 - Global Justification */
 
 /* --------------------
  * Table of Contents
  * --------------------
  * 1.  CSS Variables & Font Imports
  * 2.  Global Resets & Base Styles
- * 3.  Typography
+ * 3.  Typography (Global P Justification)
  * 4.  Layout & Container
  * 5.  Header & Navigation (Desktop & Mobile)
  * 6.  Main Content & Page Titles
@@ -13,7 +13,7 @@
  * 8.  Featured Sections (Homepage)
  * 9.  Introduction Page Specifics
  * 10. Footer
- * 11. Utility Classes (incl. .text-justify)
+ * 11. Utility Classes
  * 12. Accessibility (Skip Links, Focus Styles)
  * 13. Dark Mode (Foundation)
  * --------------------
@@ -24,8 +24,7 @@
  * --------------------
  */
 
-/* Import Google Fonts: Roboto Slab for headings, Inter for body/UI */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;600;700;800&display=swap');
+/* Google Fonts are now imported in _layouts/default.html */
 
 :root {
   /* Color Palette - Professional, Modern, with a touch of warmth */
@@ -62,7 +61,12 @@
   /* Transitions */
   --transition-base: all 0.3s ease-in-out;
   --transition-fast: all 0.2s ease-in-out;
+
+  /* RGB versions for box-shadow alpha */
+  --color-secondary-rgb: 69, 123, 157; 
 }
+/* Dark mode RGB variable will be set in dark mode media query */
+
 
 /* --------------------
  * 2. Global Resets & Base Styles
@@ -113,13 +117,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-h1 { font-size: 2.5rem; margin-bottom: var(--spacing-unit); } /* ~40px */
-h2 { font-size: 2rem; }   /* ~32px */
-h3 { font-size: 1.5rem; } /* ~24px */
-h4 { font-size: 1.25rem; } /* ~20px */
+h1 { font-size: 2.5rem; margin-bottom: var(--spacing-unit); } 
+h2 { font-size: 2rem; }   
+h3 { font-size: 1.5rem; } 
+h4 { font-size: 1.25rem; } 
 
 p {
   margin-bottom: var(--spacing-unit);
+  text-align: justify; /* GLOBAL JUSTIFICATION FOR PARAGRAPHS */
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 a {
@@ -138,6 +147,10 @@ ul, ol {
 }
 li {
   margin-bottom: calc(var(--spacing-unit) * 0.25);
+  /* If <li> contains <p>, the <p> will be justified. 
+     If <li> contains just text, it won't be justified by the global p rule.
+     If you want <li> text itself justified, add text-align:justify to li directly.
+  */
 }
 
 strong { font-weight: 600; }
@@ -207,7 +220,7 @@ blockquote {
   display: flex;
 }
 .main-navigation .nav-menu li {
-  margin-left: calc(var(--spacing-unit) * 1.25);
+  margin-left: calc(var(--spacing-unit) * 1.25); /* No margin on first item handled by flex */
 }
 .main-navigation .nav-menu a {
   font-family: var(--font-family-body);
@@ -218,11 +231,11 @@ blockquote {
   padding: 0.5rem 0.75rem;
   border-radius: var(--border-radius);
   transition: var(--transition-base);
-  position: relative; /* For potential active state indicator */
+  position: relative; 
 }
 .main-navigation .nav-menu a:hover,
 .main-navigation .nav-menu a:focus,
-.main-navigation .nav-menu a.active { /* Add .active class via JS if needed */
+.main-navigation .nav-menu a.active { 
   background-color: var(--color-secondary);
   color: var(--color-surface);
 }
@@ -233,7 +246,7 @@ blockquote {
 .header-social-links {
   display: flex;
   align-items: center;
-  margin-left: var(--spacing-unit); /* Space between nav and social */
+  margin-left: var(--spacing-unit); 
 }
 .header-social-links .social-icon {
   color: var(--color-text-muted);
@@ -248,14 +261,14 @@ blockquote {
 
 /* Mobile Menu Toggle */
 .menu-toggle {
-  display: none; /* Hidden on desktop */
+  display: none; 
   background: none;
   border: none;
   color: var(--color-primary);
-  font-size: 1.5rem; /* Hamburger icon size */
+  font-size: 1.5rem; 
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1001; /* Above nav menu */
+  z-index: 1001; 
 }
 .menu-toggle .icon-bar {
   display: block;
@@ -282,18 +295,17 @@ blockquote {
  * --------------------
  */
 .main-content-area {
-  flex-grow: 1; /* Push footer down */
+  flex-grow: 1; 
   padding: calc(var(--spacing-unit) * 2.5) 0;
 }
-.page-content > h1:first-child { /* Main page title */
+.page-content > h1:first-child { 
   text-align: center;
   color: var(--color-primary);
-  font-weight: 800; /* Heavier weight for main titles */
+  font-weight: 800; 
   margin-bottom: calc(var(--spacing-unit) * 2);
   padding-bottom: var(--spacing-unit);
   position: relative;
 }
-/* Decorative underline for main page titles */
 .page-content > h1:first-child::after {
   content: '';
   display: block;
@@ -307,11 +319,13 @@ blockquote {
 .section-intro {
   font-size: 1.1rem;
   color: var(--color-text-muted);
-  text-align: center;
+  text-align: center; /* Center the intro paragraph block */
   max-width: 700px;
   margin: 0 auto calc(var(--spacing-unit) * 2.5);
   line-height: 1.8;
 }
+/* Paragraphs within .section-intro will be justified by the global p rule */
+
 
 /* --------------------
  * 7. Project Cards & Grid
@@ -324,28 +338,28 @@ blockquote {
 }
 
 a.project-box-link {
-  display: block; /* Make the link itself a block */
+  display: block; 
   text-decoration: none;
   color: inherit;
   border-radius: var(--border-radius);
   transition: var(--transition-base);
-  box-shadow: var(--shadow-md); /* Initial shadow on the link */
+  box-shadow: var(--shadow-md); 
 }
 a.project-box-link:hover,
 a.project-box-link:focus-within {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg); /* Enhanced shadow on hover/focus */
-  outline: none; /* We'll use box-shadow for focus indication */
+  box-shadow: var(--shadow-lg); 
+  outline: none; 
 }
 a.project-box-link:focus-within {
-  box-shadow: var(--shadow-lg), 0 0 0 3px var(--color-secondary); /* Focus ring */
+  box-shadow: var(--shadow-lg), 0 0 0 3px var(--color-secondary); 
 }
 
 .project-box {
   background-color: var(--color-surface);
   border-radius: var(--border-radius);
   padding: calc(var(--spacing-unit) * 1.25);
-  height: 100%; /* Ensure cards in a row are same height if link is flex */
+  height: 100%; 
   display: flex;
   flex-direction: column;
   border: 1px solid var(--color-border);
@@ -367,12 +381,12 @@ a.project-box-link:focus-within {
   margin-bottom: 0.75rem;
 }
 .project-header img {
-  width: 48px; /* Slightly smaller icon */
+  width: 48px; 
   height: 48px;
   object-fit: contain;
   border-radius: 4px;
   padding: 0.25rem;
-  background-color: var(--color-light-accent); /* Light bg for icons */
+  background-color: var(--color-light-accent); 
 }
 .project-header-text h3 {
   font-size: 1.2rem;
@@ -388,23 +402,22 @@ a.project-box-link:focus-within {
   line-height: 1.3;
 }
 
-.project-box .project-objective {
+.project-box .project-objective { /* Paragraphs here will be justified */
   font-size: 0.95rem;
   color: var(--color-text-base);
-  margin-bottom: auto; /* Pushes key result/indicator to bottom */
-  padding-bottom: var(--spacing-unit); /* Space before the indicator */
-  flex-grow: 1;
+  margin-bottom: var(--spacing-unit); 
+  flex-grow: 1; /* Allows objective to take space before key-result */
 }
 .project-box .project-objective strong {
   font-weight: 600;
   color: var(--color-primary);
 }
 
-.project-box .project-key-result { /* New class for key result */
+.project-box .project-key-result { /* Paragraphs here will be justified */
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-secondary);
-  margin-top: var(--spacing-unit);
+  margin-top: auto; /* Pushes to bottom if objective is short */
   padding-top: var(--spacing-unit);
   border-top: 1px dashed var(--color-border);
 }
@@ -414,7 +427,7 @@ a.project-box-link:focus-within {
   font-weight: 600;
   color: var(--color-accent);
   text-align: right;
-  margin-top: var(--spacing-unit);
+  margin-top: var(--spacing-unit); /* Space above indicator */
   display: block;
   text-decoration: none;
   transition: var(--transition-fast);
@@ -440,7 +453,7 @@ div.project-box.no-link:hover {
 .featured-sections-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--spacing-unit) * 1.5;
+  gap: calc(var(--spacing-unit) * 1.5);
   margin-bottom: calc(var(--spacing-unit) * 2);
 }
 a.featured-section {
@@ -452,7 +465,7 @@ a.featured-section {
   text-decoration: none;
   color: var(--color-text-base);
   transition: var(--transition-base);
-  border-left: 5px solid transparent; /* Accent border on hover */
+  border-left: 5px solid transparent; 
 }
 a.featured-section:hover,
 a.featured-section:focus-within {
@@ -476,7 +489,7 @@ a.featured-section:focus-within {
   margin-right: 0.5em;
   font-size: 1.2em;
 }
-.featured-section p {
+.featured-section p { /* Paragraphs here will be justified by global p rule */
   font-size: 0.9rem;
   color: var(--color-text-muted);
   line-height: 1.6;
@@ -498,7 +511,7 @@ a.featured-section:focus-within {
   box-shadow: var(--shadow-sm);
 }
 .profile-image {
-  width: 120px; /* Smaller profile image */
+  width: 120px; 
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
@@ -506,7 +519,7 @@ a.featured-section:focus-within {
   box-shadow: var(--shadow-md);
 }
 .profile-info h2 {
-  font-size: 2rem; /* Name size */
+  font-size: 2rem; 
   margin-bottom: 0.1rem;
 }
 .profile-info .tagline {
@@ -525,30 +538,31 @@ a.featured-section:focus-within {
 .introduction-contact-icons a:hover img {
   opacity: 1; transform: scale(1.1);
 }
-.intro-pitch {
+.intro-pitch { /* This is a <p> tag, so it will be justified */
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--color-text-base);
-  padding: var(--spacing-unit) * 1.25;
+  padding: calc(var(--spacing-unit) * 1.25);
   margin: calc(var(--spacing-unit)*2) 0;
   border-left: 5px solid var(--color-accent);
   background-color: var(--color-surface);
   box-shadow: var(--shadow-sm);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
-.main-content ul li { /* Better list styling for experience */
+.main-content ul li { 
   padding-left: 0.5em;
   position: relative;
 }
-.main-content ul li::before {
-  content: "\2022"; /* Bullet character */
+/* Custom bullets for lists in main content for better visual */
+.main-content-area ul:not(.nav-menu) > li::before {
+  content: "\2022"; 
   color: var(--color-secondary);
   font-weight: bold;
   display: inline-block;
   width: 1em;
-  margin-left: -1.2em; /* Adjust to align */
+  margin-left: -1.2em; 
   position: absolute;
-  left: 0.2em;
+  left: 0.2em; /* Adjust as needed */
 }
 
 
@@ -560,7 +574,7 @@ a.featured-section:focus-within {
   background-color: var(--color-primary);
   color: var(--color-text-on-dark);
   padding: calc(var(--spacing-unit) * 2.5) 0;
-  margin-top: auto; /* Push to bottom */
+  margin-top: auto; 
   font-size: 0.9rem;
 }
 .footer-content-wrapper {
@@ -592,7 +606,7 @@ a.featured-section:focus-within {
  * 11. Utility Classes
  * --------------------
  */
-.sr-only { /* For screen readers only */
+.sr-only { 
   position: absolute;
   width: 1px;
   height: 1px;
@@ -603,19 +617,18 @@ a.featured-section:focus-within {
   white-space: nowrap;
   border: 0;
 }
-.text-justify {
-  text-align: justify;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+.text-center { text-align: center !important; }
+.text-left { 
+  text-align: left !important;
+  -webkit-hyphens: none !important; 
+  hyphens: none !important; /* If you want to specifically disable justification and hyphenation */
 }
-.text-center { text-align: center; }
+
 
 /* Skip to content link styling */
 .skip-to-content-link {
   position: absolute;
-  left: -9999px; /* Keep it off-screen */
+  left: -9999px; 
   top: auto;
   width: 1px;
   height: 1px;
@@ -632,7 +645,7 @@ a.featured-section:focus-within {
   top: 1rem;
   width: auto;
   height: auto;
-  z-index: 99999; /* Ensure it's on top */
+  z-index: 99999; 
   border-radius: var(--border-radius);
 }
 
@@ -641,21 +654,11 @@ a.featured-section:focus-within {
  * 12. Accessibility (Focus Styles)
  * --------------------
  */
-:focus-visible { /* Modern focus styling */
+:focus-visible { 
   outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(var(--color-secondary-rgb, 69, 123, 157), 0.3); /* Fallback for secondary color RGB if not defined */
+  box-shadow: 0 0 0 4px rgba(var(--color-secondary-rgb), 0.3); 
 }
-/* Define --color-secondary-rgb for the shadow */
-:root {
-  --color-secondary-rgb: 69, 123, 157; /* RGB for #457B9D */
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-secondary-rgb: 77, 189, 228; /* RGB for dark mode #4DBDE4 */
-  }
-}
-
 /* Remove outline for elements where focus is handled by box-shadow (cards) */
 a.project-box-link:focus-visible,
 a.featured-section:focus-visible {
@@ -667,24 +670,33 @@ a.featured-section:focus-visible {
  * Responsive Overrides (Mobile Navigation)
  * --------------------
  */
-@media (max-width: 850px) { /* Breakpoint for mobile nav */
+@media (max-width: 850px) { 
   .menu-toggle {
     display: block;
   }
+  .main-navigation {
+    width: 100%; /* Allow it to take full width before collapsing items */
+    order: 3; /* Place it below branding and social links in flex order */
+    margin-top: var(--spacing-unit); /* Space when it wraps */
+  }
   .main-navigation .nav-menu {
-    display: none; /* Hidden by default */
+    display: none; 
     flex-direction: column;
-    position: absolute;
-    top: 100%; /* Position below header */
+    width: 100%; /* Full width for dropdown */
+    /* Position absolute styling handled by JS toggle or specific CSS if needed */
+    /* For now, let's assume it just stacks */
+  }
+  .main-navigation .nav-menu.is-active {
+    display: flex; 
+    position: absolute; /* Position it absolutely for dropdown */
+    top: 100%; /* Below the header */
     left: 0;
     right: 0;
     background-color: var(--color-surface);
     box-shadow: var(--shadow-md);
     padding: var(--spacing-unit) 0;
     border-top: 1px solid var(--color-border);
-  }
-  .main-navigation .nav-menu.is-active {
-    display: flex; /* Show when active */
+    z-index: 999; /* Ensure it's above content but below sticky header if header z-index is higher */
   }
   .main-navigation .nav-menu li {
     margin-left: 0;
@@ -701,8 +713,14 @@ a.featured-section:focus-visible {
     border-bottom: none;
   }
   .header-social-links {
-    margin-left: auto; /* Push social links to right if space allows next to hamburger */
-    padding-right: 0.5rem; /* Space from edge if toggle is far left */
+    margin-left: auto; 
+    padding-right: 0; /* No extra padding if toggle is on the right of branding */
+  }
+  .header-content-wrapper {
+     flex-wrap: wrap; /* Allow items to wrap */
+  }
+  .site-branding {
+    flex-grow: 1; /* Allow branding to take available space */
   }
 }
 
@@ -715,16 +733,17 @@ a.featured-section:focus-visible {
   .profile-info { text-align: center; }
   .introduction-contact-icons { justify-content: center; }
   .footer-content-wrapper { flex-direction: column; text-align: center; }
-  .footer-copyright { margin-bottom: var(--spacing-unit); }
+  .footer-copyright { margin-bottom: var(--spacing-unit); order: 1; /* Copyright first */}
+  .footer-back-button { order: 2; } /* Back button after copyright */
 }
 
 @media (max-width: 480px) {
-  :root { --font-base-size: 15px; } /* Slightly smaller base font for small screens */
+  :root { --font-base-size: 15px; } 
   .site-branding .site-title-link { font-size: 1.5rem; }
   .site-branding .site-tagline { font-size: 0.75rem; }
   .project-header img { width: 40px; height: 40px; }
   .project-header-text h3 { font-size: 1.1rem; }
-  .header-social-links .social-icon { font-size: 1rem; margin-left: 0.75rem;}
+  .header-social-links { display: none; /* Hide social links on very small screens to save space */ }
 }
 
 
@@ -734,22 +753,24 @@ a.featured-section:focus-visible {
  */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #A6D4FA;        /* Light Blue for headings/strong text */
-    --color-secondary: #82C0E7;      /* Lighter Blue for accents */
-    --color-accent: #FF6B6B;         /* Softer Red */
-    --color-light-accent: #1A2A3A;   /* Darker bg for card elements */
-    --color-warm-accent: #4A90A0;    /* Darker Aqua */
+    --color-primary: #A6D4FA;        
+    --color-secondary: #82C0E7;      
+    --color-accent: #FF6B6B;         
+    --color-light-accent: #1A2A3A;   
+    --color-warm-accent: #4A90A0;    
 
-    --color-text-base: #E0E5EA;       /* Light gray for body text */
-    --color-text-muted: #9FB3C8;      /* Muted lighter gray */
-    --color-text-on-dark: #0D1B2A;    /* Dark text for light accents (if any) */
-    --color-background: #0D1B2A;      /* Very Dark Blue */
-    --color-surface: #1C2E42;         /* Darker Blue-Gray for cards */
-    --color-border: #3A506B;          /* Muted blue for borders */
+    --color-text-base: #E0E5EA;       
+    --color-text-muted: #9FB3C8;      
+    --color-text-on-dark: #0D1B2A;    
+    --color-background: #0D1B2A;      
+    --color-surface: #1C2E42;         
+    --color-border: #3A506B;          
 
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    --color-secondary-rgb: 130, 192, 231; /* RGB for dark mode #82C0E7 */
   }
 
   body {
@@ -771,15 +792,17 @@ a.featured-section:focus-visible {
   .main-navigation .nav-menu a:focus,
   .main-navigation .nav-menu a.active {
     background-color: var(--color-secondary);
-    color: var(--color-background); /* Dark text on light active bg */
+    color: var(--color-background); 
   }
   .header-social-links .social-icon { color: var(--color-text-muted); }
   .header-social-links .social-icon:hover { color: var(--color-secondary); }
   .menu-toggle { color: var(--color-primary); }
   .menu-toggle .icon-bar { background-color: var(--color-primary); }
   /* Mobile nav dropdown bg in dark mode */
-  .main-navigation .nav-menu { background-color: var(--color-surface); border-top-color: var(--color-border); }
-  .main-navigation .nav-menu a { border-bottom-color: var(--color-border); }
+  @media (max-width: 850px) {
+    .main-navigation .nav-menu.is-active { background-color: var(--color-surface); border-top-color: var(--color-border); }
+    .main-navigation .nav-menu a { border-bottom-color: var(--color-border); }
+  }
 
 
   .page-content > h1:first-child::after { background-color: var(--color-accent); }
@@ -787,7 +810,7 @@ a.featured-section:focus-visible {
 
   .project-box { background-color: var(--color-surface); border-color: var(--color-border); }
   div.project-box.no-link { background-color: var(--color-surface); border-color: var(--color-border); }
-  .project-header img { background-color: var(--color-light-accent); }
+  .project-header img { background-color: var(--color-light-accent); } /* Use a darker bg for icons if main bg is too dark */
   .project-header-text h3 { color: var(--color-primary); }
   .project-header-text .tools-used,
   .project-header-text .dataset-title { color: var(--color-text-muted); }
@@ -807,14 +830,13 @@ a.featured-section:focus-visible {
   .profile-image { border-color: var(--color-surface); }
   .profile-info .tagline { color: var(--color-secondary); }
   .intro-pitch { background-color: var(--color-surface); border-left-color: var(--color-accent); }
-  .main-content ul li::before { color: var(--color-secondary); }
+  .main-content-area ul:not(.nav-menu) > li::before { color: var(--color-secondary); }
 
 
-  .site-footer { background-color: var(--color-primary); color: var(--color-text-on-dark); } /* Primary becomes light, text on it becomes dark */
+  .site-footer { background-color: var(--color-primary); color: var(--color-text-on-dark); } 
   .footer-back-button button#backBtn { background-color: var(--color-secondary); color: var(--color-background); }
   .footer-back-button button#backBtn:hover { background-color: var(--color-accent); }
 
   code, pre { background-color: var(--color-light-accent); color: var(--color-text-base); border-color: var(--color-border); }
   blockquote { background-color: var(--color-light-accent); border-left-color: var(--color-warm-accent); color: var(--color-text-muted); }
-
 }

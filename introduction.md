@@ -4,10 +4,10 @@ title: Introduction
 ---
 
 <div class="profile-header">
-  <img src="{{ '/assets/images/Logo_Anup_Acharya.png' | relative_url }}" alt="CA. Anup Acharya" class="profile-image">
+  <img src="{{ '/assets/images/your_professional_headshot.jpg' | relative_url }}" alt="CA. Anup Acharya" class="profile-image">
   <div class="profile-info">
     <h2>CA. Anup Acharya</h2>
-    <p class="tagline">{{ site.description | split: 'showcasing' | first | strip | remove: "Professional data science portfolio of Anup Acharya, " }}</p> <!-- Auto-generate tagline from site desc -->
+    <p class="tagline">{{ site.description | split: 'showcasing' | first | strip | remove: "Professional data science portfolio of Anup Acharya, " }}</p>
     <div class="introduction-contact-icons">
       <a href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer" aria-label="Email Anup Acharya">
         <img src="{{ '/assets/images/gmail.png' | relative_url }}" alt="Gmail Icon" >
@@ -20,13 +20,13 @@ title: Introduction
   </div>
 </div>
 
-<p class="intro-pitch text-justify">
+<p class="intro-pitch">
 A results-oriented Data Analyst and Chartered Accountant with over 6 years of experience leveraging financial acumen and advanced analytical skills to transform complex data into actionable insights. Passionate about driving business decisions, optimizing processes, and uncovering financial narratives through meticulous data exploration, robust analysis (SQL, R, Python), and compelling visualizations (Tableau). Eager to apply my expertise to solve challenging problems and contribute to data-driven success. [Tailor this pitch to be uniquely yours!]
 </p>
   
 # Professional Profile
 
-<p class="text-justify">Strategic financial professional with over 6 years of experience in financial analysis, audit management, and operational optimization. Recently expanded skillset to include data analytics certification from Google, enhancing my ability to deliver data-backed strategic recommendations.</p>
+<p>Strategic financial professional with over 6 years of experience in financial analysis, audit management, and operational optimization. Recently expanded skillset to include data analytics certification from Google, enhancing my ability to deliver data-backed strategic recommendations.</p>
 
 ## Professional Experience
 

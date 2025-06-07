@@ -3,20 +3,18 @@
 {%- assign page_lang = page.lang | default: site_lang -%}
 <html lang="{{ page_lang }}">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"> <!-- ABSOLUTELY FIRST TAG IN HEAD -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Good to have early for browser compatibility -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for responsiveness -->
 
-  <title>{{ page.title | default: site.title | escape }}</title> 
+  <title>{{ page.title | default: site.title | escape }}</title>
   
-  {% seo %} <!-- Jekyll SEO Tag Plugin Output -->
+  {% seo %}
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- We will choose specific fonts when we do the new style.css -->
-  <!-- Placeholder for now, will be updated with new CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 
   <!-- Main Stylesheet -->
@@ -44,7 +42,7 @@
         <a href="{{ '/' | relative_url }}" class="site-title-link">
           {{ site.author_name | escape }}
         </a>
-        <p class="site-tagline">Data Analyst | Financial Professional</p> <!-- Placeholder, update if needed -->
+        <p class="site-tagline">Data Analyst | Financial Professional</p> <!-- Consider moving to _config.yml if you change it often -->
       </div>
       <nav class="main-navigation" aria-label="Main Navigation">
         <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
@@ -79,12 +77,9 @@
     <div class="container footer-content-wrapper">
       <div class="footer-navigation">
         <!-- Optional: Add a few key links here if desired -->
-        <!-- <a href="{{ '/' | relative_url }}">Home</a> -->
-        <!-- <a href="#">Privacy Policy</a> -->
       </div>
       <div class="footer-copyright">
         <p>© <span id="currentYear"></span> {{ site.author_name | escape }}. All rights reserved.</p>
-        <!-- Optional: <p>Designed with <i class="fas fa-heart" style="color: var(--color-accent-vibrant);"></i></p> -->
       </div>
        <div class="footer-back-button">
          <button id="backBtn" aria-label="Go back to previous page">
@@ -103,7 +98,6 @@
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       primaryMenu.classList.toggle('is-active');
-      // Optional: Change icon to X on open
       menuToggle.classList.toggle('is-active'); 
     });
   }
