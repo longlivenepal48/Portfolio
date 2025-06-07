@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Kaggle Competitions
+description: "Anup Acharya's Kaggle competition entries, showcasing machine learning models, feature engineering techniques, and performance in predictive analytics challenges."
 ---
 
 # Kaggle Competition Highlights
@@ -55,7 +56,7 @@ title: Kaggle Competitions
         </div>
     </div>
     <p class="project-objective"><strong>Objective:</strong> To conduct an in-depth exploratory data analysis (EDA) of Nepal's economic trends (2015-2024), with a focus on the tourism and hospitality sectors, to uncover growth patterns and correlations.</p>
-    <span class="project-details-indicator">View Report/Dashboard →</span>
+    <span class="project-details-indicator">View on Kaggle →</span>
     </div>
   </a>
 

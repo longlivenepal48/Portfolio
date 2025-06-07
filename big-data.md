@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Big Data Projects
+description: "Anup Acharya's big data projects, demonstrating expertise in technologies like Apache Spark, MongoDB, and building data pipelines for large-scale financial systems and analytics."
 ---
 
 # Big Data Projects
@@ -22,7 +23,7 @@ title: Big Data Projects
       </div>
     </div>
     <p class="project-objective"><strong>Objective:</strong> To design and implement a scalable, centralized financial data warehouse for a multi-entity hospitality group, enabling comprehensive, real-time reporting and advanced analytics.</p>
-    <!-- If this were a link: <span class="project-details-indicator">View System Details →</span> -->
+    <span class="project-details-indicator">View in Details →</span>
   </div>
 
 
@@ -37,7 +38,7 @@ title: Big Data Projects
         </div>
     </div>
     <p class="project-objective"><strong>Objective:</strong> To develop an analytical platform for comprehensive corporate expense pattern analysis across divisions, identifying significant cost-saving opportunities and enhancing budgetary control.</p>
-    <!-- If this were a link: <span class="project-details-indicator">Explore Platform Insights →</span> -->
+    <span class="project-details-indicator">View in Details →</span>
   </div>
 
   <div class="project-box no-link">
@@ -51,7 +52,7 @@ title: Big Data Projects
         </div>
     </div>
     <p class="project-objective"><strong>Objective:</strong> To leverage machine learning for customer segmentation and analyze revenue patterns to develop targeted marketing strategies and predict future customer lifetime value (CLV).</p>
-    <!-- If this were a link: <span class="project-details-indicator">See Segmentation Strategy →</span> -->
+    <span class="project-details-indicator">View in Details →</span>
   </div>
 
 </div>

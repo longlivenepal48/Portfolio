@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Data Analysis Projects
+description: "A collection of Anup Acharya's data analysis projects demonstrating skills in R, Python, SQL, and data visualization for deriving insights from complex datasets." 
 ---
 
 # Data Analysis Projects
@@ -31,7 +32,7 @@ title: Data Analysis Projects
     <div class="project-box">
       <span class="project-number">Project II</span>
       <div class="project-header">
-        <img src="{{ '/assets/images/people.png' | relative_url }}" alt="Population Icon"> <!-- Ensure this image exists -->
+        <img src="{{ '/assets/images/people.png' | relative_url }}" alt="Population Icon"> 
         <div class="project-header-text">
           <h3>Global Population Dynamics</h3>
           <div class="dataset-title">World Bank Population Data</div>
@@ -39,7 +40,7 @@ title: Data Analysis Projects
         </div>
       </div>
       <p class="project-objective"><strong>Objective:</strong> To analyze global demographic trends (distribution, growth, density) and identify significant regional patterns over time.</p>
-      <span class="project-details-indicator">View Visualizations →</span>
+      <span class="project-details-indicator">View in Details →</span>
     </div>
   </a>
 
@@ -47,7 +48,7 @@ title: Data Analysis Projects
     <div class="project-box">
       <span class="project-number">Project III</span>
       <div class="project-header">
-        <img src="{{ '/assets/images/stock-market.png' | relative_url }}" alt="Stock Market Icon"> <!-- Ensure this image exists -->
+        <img src="{{ '/assets/images/stock-market.png' | relative_url }}" alt="Stock Market Icon"> 
         <div class="project-header-text">
           <h3>BAC Stock Volatility Analysis</h3>
           <div class="dataset-title">Kaggle BAC Stock Dataset</div>
@@ -55,20 +56,21 @@ title: Data Analysis Projects
         </div>
       </div>
       <p class="project-objective"><strong>Objective:</strong> To conduct time-series analysis of Bank of America's stock, focusing on volatility modeling and financial market characteristics.</p>
-      <span class="project-details-indicator">View Modeling Details →</span>
+      <span class="project-details-indicator">View in Details →</span>
     </div>
   </a>
 
   <div class="project-box no-link"> 
     <span class="project-number">Project IV</span>
     <div class="project-header"> 
-       <img src="{{ '/assets/images/citybike_icon.png' | relative_url }}" alt="City Bike Icon"> <!-- ADD YOUR ICON IMAGE and ensure it exists -->
+       <img src="{{ '/assets/images/citybike_icon.png' | relative_url }}" alt="City Bike Icon"> <!-- ADD YOUR ICON IMAGE -->
        <div class="project-header-text">
           <h3>City Bikes Demand Forecasting</h3>
           <div class="tools-used">Tech: Python (Pandas, Scikit-learn), Excel</div>
         </div>
     </div>
     <p class="project-objective"><strong>Objective:</strong> To develop a predictive model for daily bike rental demand to help optimize inventory and operations for a city bike-sharing program.</p>
+    <span class="project-details-indicator">View in Details →</span>
   </div>
 
 </div>

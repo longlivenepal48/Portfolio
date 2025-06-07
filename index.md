@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+description: "Welcome to Anup Acharya's Data Science Portfolio. Explore projects in data analysis, big data, and Kaggle competition entries, demonstrating expertise in finance and analytics."
 ---
 
 # Welcome to My Professional Portfolio
@@ -9,7 +10,7 @@ title: Home
   I'm a strategic financial professional with expertise in financial analysis, audit management, and data analytics. My background combines traditional accounting with modern data analysis techniques to uncover insights and drive business value.
 </p>
 
-<!-- "Portfolio Sections Overview" section has been REMOVED -->
+<!-- "Portfolio Sections Overview" has been REMOVED -->
 
 ## Featured Sections
 <p class="section-intro">Click below to explore different facets of my work:</p>
