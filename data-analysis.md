@@ -23,12 +23,6 @@ title: Data Analysis Projects
         </div>
       </div>
       <p class="project-objective"><strong>Objective:</strong> To explore the complex relationships between diamond attributes (cut, color, clarity, carat) and price, aiming to identify key price drivers and build a predictive understanding.</p>
-      <ul>
-        <li>Conducted thorough EDA, data cleaning (handling duplicates, zero values), and feature engineering (e.g., volume).</li>
-        <li>Utilized statistical analysis and visualizations in R to uncover non-linear relationships and counter-intuitive patterns.</li>
-        <li><strong>Key Insight/Result:</strong> Demonstrated that while carat weight is dominant, normalizing by price-per-volume reveals more intuitive quality-price correlations. [Your specific quantifiable finding here! e.g., Developed a regression model achieving an R-squared of X.].</li>
-      </ul>
-      <span class="project-details-indicator">View Analysis →</span>
     </div>
   </a>
 
@@ -44,12 +38,6 @@ title: Data Analysis Projects
         </div>
       </div>
       <p class="project-objective"><strong>Objective:</strong> To analyze global demographic trends, including population distribution, growth rates, and density, identifying significant patterns and regional disparities over time.</p>
-      <ul>
-        <li>Processed and analyzed time-series population data for [Number] countries, focusing on data integrity and consistency.</li>
-        <li>Created dynamic visualizations (e.g., using gganimate) to illustrate population shifts and growth trajectories.</li>
-        <li><strong>Key Insight/Result:</strong> Uncovered significant disparities in population growth, highlighting [mention a specific finding, e.g., "X regions facing rapid urbanization challenges" or "quantified impact of Y factor on growth rates"].</li>
-      </ul>
-      <span class="project-details-indicator">View Visualizations →</span>
     </div>
   </a>
 
@@ -65,12 +53,6 @@ title: Data Analysis Projects
         </div>
       </div>
       <p class="project-objective"><strong>Objective:</strong> To conduct a thorough time-series analysis of Bank of America's stock (BAC), focusing on volatility modeling and understanding financial market characteristics.</p>
-      <ul>
-        <li>Performed rigorous data validation and cleaning on extensive historical stock data.</li>
-        <li>Applied GARCH models to analyze and forecast stock volatility, identifying periods of high persistence (β1 = 0.86).</li>
-        <li><strong>Key Insight/Result:</strong> Successfully modeled volatility clusters, providing insights into risk assessment for BAC stock. [If a predictive element was involved, mention its outcome, e.g., "Forecasted volatility with X% accuracy over Y period."].</li>
-      </ul>
-      <span class="project-details-indicator">View Modeling →</span>
     </div>
   </a>
 
@@ -86,11 +68,5 @@ title: Data Analysis Projects
         </div>
     </div>
     <p class="project-objective"><strong>Objective:</strong> To develop a predictive model for daily bike rental demand to help a city bike-sharing program optimize inventory and operations.</p>
-    <ul>
-        <li>Engineered time-series features from historical rental data and integrated external factors like weather and public holidays using Pandas.</li>
-        <li>Developed and evaluated a Multiple Linear Regression (MLM) model in Scikit-learn, addressing challenges such as [mention a challenge, e.g., multicollinearity or seasonality].</li>
-        <li><strong>Key Result:</strong> The MLM model achieved an R-squared of [e.g., 0.75] / a Mean Absolute Error (MAE) of [e.g., X bikes], providing actionable daily demand forecasts. [Optionally, mention how any user-friendly interface helped stakeholders].</li>
-    </ul>
-    <!-- No "View Details" indicator if it's not a link and the content is self-contained here -->
   </div>
 </div>
