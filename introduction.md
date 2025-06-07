@@ -5,7 +5,7 @@ description: "Detailed professional background, experience, skills, and qualific
 ---
 
 <div class="profile-header">
-  <img src="{{ '/assets/images/your_professional_headshot.jpg' | relative_url }}" alt="CA. Anup Acharya" class="profile-image">
+  <img src="{{ '/assets/images/Logo_Anup_Acharya.png' | relative_url }}" alt="CA. Anup Acharya" class="profile-image">
   <div class="profile-info">
     <h2>CA. Anup Acharya</h2>
     <p class="tagline">{{ site.description | split: 'showcasing' | first | strip | remove: "Professional data science portfolio of Anup Acharya, " }}</p>
