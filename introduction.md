@@ -3,16 +3,16 @@ layout: default
 title: Introduction
 ---
 
-<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 1.5rem;">
-  <!-- Consider replacing Logo_Anup_Acharya.png with a professional headshot for a more personal touch -->
-  <img src="{{ '/assets/images/professional_headshot_anup.jpg' | relative_url }}" alt="CA. Anup Acharya" class="profile-image"> <!-- Placeholder for headshot -->
-  <div>
-    <h2 style="margin-bottom: 0.25rem;">CA. Anup Acharya</h2>
-    <p style="margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-muted-color);">Chartered Accountant | CPA (Australia) | Certified Data Analyst</p>
+<div class="profile-header">
+  <img src="{{ '/assets/images/your_professional_headshot.jpg' | relative_url }}" alt="CA. Anup Acharya" class="profile-image">
+  <div class="profile-info">
+    <h2>CA. Anup Acharya</h2>
+    <p class="tagline">Chartered Accountant | CPA (Australia) | Certified Data Analyst</p>
     <div class="introduction-contact-icons">
       <a href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer" aria-label="Email Anup Acharya">
         <img src="{{ '/assets/images/gmail.png' | relative_url }}" alt="Gmail Icon" >
       </a>
+         {/* Simple spacing */}
       <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="Anup Acharya's LinkedIn Profile">
         <img src="{{ '/assets/images/linkedin.png' | relative_url }}" alt="LinkedIn Icon" >
       </a>
@@ -20,8 +20,7 @@ title: Introduction
   </div>
 </div>
 
-<!-- Enhanced Opening Pitch -->
-<p style="font-size: 1.1em; font-style: italic;">
+<p class="intro-pitch">
 A results-oriented Data Analyst and Chartered Accountant with over 6 years of experience leveraging financial acumen and advanced analytical skills to transform complex data into actionable insights. Passionate about driving business decisions, optimizing processes, and uncovering financial narratives through meticulous data exploration, robust analysis (SQL, R, Python), and compelling visualizations (Tableau). Eager to apply my expertise to solve challenging problems and contribute to data-driven success.
 </p>
   

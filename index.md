@@ -5,36 +5,37 @@ title: Home
 
 # Welcome to My Professional Portfolio
 
-I'm a strategic financial professional with expertise in financial analysis, audit management, and data analytics. My background combines traditional accounting with modern data analysis techniques.
+<p class="section-intro"> {/* Using a class for consistency */}
+  I'm a strategic financial professional with expertise in financial analysis, audit management, and data analytics. My background combines traditional accounting with modern data analysis techniques to uncover insights and drive business value.
+</p>
 
 ## Featured Sections
 <div class="featured-sections-container">
-    <a href="{{ site.baseurl }}/introduction" class="featured-section">
+    <a href="{{ '/introduction' | relative_url }}" class="featured-section">
         <h3><i class="fas fa-user-tie"></i> About Me</h3>
-        <p>My professional background, experience, and qualifications as a Chartered Accountant and CPA with focus on financial analysis.</p>
+        <p>Discover my professional background, extensive experience, and qualifications as a Chartered Accountant & CPA, with a strong focus on data-driven financial analysis.</p>
     </a>
 
-    <a href="{{ site.baseurl }}/data-analysis" class="featured-section">
+    <a href="{{ '/data-analysis' | relative_url }}" class="featured-section">
         <h3><i class="fas fa-chart-line"></i> Data Analysis</h3>
-        <p>Projects showcasing my analytical skills with Excel, SQL, R, and Python for financial and operational insights.</p>
+        <p>Explore projects showcasing my analytical skills using Excel, SQL, R, and Python to derive actionable financial and operational insights.</p>
     </a>
 
-    <a href="{{ site.baseurl }}/big-data" class="featured-section">
+    <a href="{{ '/big-data' | relative_url }}" class="featured-section">
         <h3><i class="fas fa-server"></i> Big Data</h3>
-        <p>Large-scale data implementations for financial consolidation, expense optimization, and business intelligence.</p>
+        <p>Review large-scale data implementations for financial consolidation, expense optimization, and advanced business intelligence solutions.</p>
     </a>
 
-    <a href="{{ site.baseurl }}/kaggle" class="featured-section">
+    <a href="{{ '/kaggle' | relative_url }}" class="featured-section">
         <h3><i class="fab fa-kaggle"></i> Kaggle Projects</h3>
-        <p>My data science competition entries and results, focusing on financial prediction and analysis.</p>
+        <p>See my data science competition entries, methodologies, and results, particularly focusing on financial prediction and complex analysis.</p>
     </a>
 </div>
 
 ## Professional Highlights
-
 <ul>
-    <li><strong>Financial Management:</strong> Expertise in GAAP and NFRS compliant financial statement preparation and analysis.</li>
-    <li><strong>Audit & Compliance:</strong> Strong background in audit management, risk assessment, and regulatory compliance.</li>
-    <li><strong>Data Analytics:</strong> Recently certified in Google Data Analytics with skills in SQL, R, and data visualization.</li>
-    <li><strong>Business Intelligence:</strong> Experience creating dashboards and reports that drive strategic decision-making.</li>
+    <li><strong>Strategic Financial Management:</strong> Expertise in GAAP and NFRS compliant financial statement preparation, in-depth analysis, and forecasting.</li>
+    <li><strong>Audit & Compliance Excellence:</strong> Strong background in comprehensive audit management, rigorous risk assessment, and ensuring regulatory compliance.</li>
+    <li><strong>Advanced Data Analytics:</strong> Google Certified Data Analyst with proficient skills in SQL, R, Python, and impactful data visualization techniques.</li>
+    <li><strong>Actionable Business Intelligence:</strong> Proven experience in creating dynamic dashboards and insightful reports that drive strategic decision-making.</li>
 </ul>
