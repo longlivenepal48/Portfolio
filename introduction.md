@@ -4,7 +4,7 @@ title: Introduction
 ---
 
 <div class="profile-header">
-  <img src="{{ '/assets/images/your_professional_headshot.jpg' | relative_url }}" alt="CA. Anup Acharya" class="profile-image">
+  <img src="{{ '/assets/images/Logo_Anup_Acharya.png' | relative_url }}" alt="CA. Anup Acharya" class="profile-image">
   <div class="profile-info">
     <h2>CA. Anup Acharya</h2>
     <p class="tagline">Chartered Accountant | CPA (Australia) | Certified Data Analyst</p>
@@ -21,7 +21,7 @@ title: Introduction
 </div>
 
 <p class="intro-pitch">
-A results-oriented Data Analyst and Chartered Accountant with over 6 years of experience leveraging financial acumen and advanced analytical skills to transform complex data into actionable insights. Passionate about driving business decisions, optimizing processes, and uncovering financial narratives through meticulous data exploration, robust analysis (SQL, R, Python), and compelling visualizations (Tableau). Eager to apply my expertise to solve challenging problems and contribute to data-driven success.
+A results-oriented Data Analyst and Chartered Accountant with over 6 years of experience leveraging financial acumen and advanced analytical skills to transform complex data into actionable insights. Passionate about driving business decisions, optimizing processes, and uncovering financial narratives through meticulous data exploration, robust analysis (SQL, R, Python), and compelling visualizations (Tableau). Eager to apply my expertise to solve challenging problems and contribute to data-driven success. [Tailor this pitch to be uniquely yours!]
 </p>
   
 # Professional Profile
@@ -63,7 +63,7 @@ A results-oriented Data Analyst and Chartered Accountant with over 6 years of ex
 
 ### Article Service | Vaithisvaran & Co, Chartered Accountants | Chennai | Feb 2015 – Feb 2018
 <ul>
-  <li>Gained foundational experience in statutory audits, tax compliance, and financial statement preparation for diverse clients. [Add 1-2 key skills/learnings if impactful].</li>
+  <li>Gained foundational experience in statutory audits, tax compliance, and financial statement preparation for diverse clients. [Add 1-2 key skills/learnings if impactful to your data analyst narrative].</li>
 </ul>
 
 ## Education
@@ -81,7 +81,7 @@ A results-oriented Data Analyst and Chartered Accountant with over 6 years of ex
       <li>Data Collection, Cleaning, and Preparation (SQL, R, Spreadsheets)</li>
       <li>Data Analysis and Interpretation (identifying patterns, drawing conclusions)</li>
       <li>Data Visualization and Storytelling (Tableau, R ggplot2)</li>
-      <li>Practical application through capstone project focusing on [briefly mention capstone topic if relevant]</li>
+      <li>Practical application through capstone project focusing on [briefly mention capstone topic and its impact if relevant]</li>
     </ul>
   </li>
   <li><strong>Microsoft Excel - Beginner to Advance Certificate Course</strong> (Proficient in PivotTables, VLOOKUP/XLOOKUP, Power Query, complex formulas for data manipulation and reporting)</li>

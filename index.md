@@ -5,7 +5,7 @@ title: Home
 
 # Welcome to My Professional Portfolio
 
-<p class="section-intro"> {/* Using a class for consistency */}
+<p class="section-intro">
   I'm a strategic financial professional with expertise in financial analysis, audit management, and data analytics. My background combines traditional accounting with modern data analysis techniques to uncover insights and drive business value.
 </p>
 
