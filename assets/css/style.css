@@ -587,7 +587,7 @@ a.featured-section:focus-within {
 .site-footer {
   background-color: var(--color-primary);
   color: var(--color-text-on-dark);
-  padding: calc(var(--spacing-unit) * 2.5) 0;
+  padding: calc(var(--spacing-unit) * 1.5) 0;
   margin-top: auto; 
   font-size: 0.9rem;
 }
