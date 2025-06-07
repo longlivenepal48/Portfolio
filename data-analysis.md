@@ -1,12 +1,13 @@
 ---
 layout: default
 title: Data Analysis Projects
-description: "A collection of Anup Acharya's data analysis projects demonstrating skills in R, Python, SQL, and data visualization for deriving insights from complex datasets." 
 ---
 
 # Data Analysis Projects
 
-<!-- The introductory paragraph for this section has been moved to index.md -->
+<p class="page-intro-paragraph">
+  This section showcases my ability to extract insights from diverse datasets using tools like R and Python. Each project demonstrates a systematic approach to data cleaning, analysis, visualization, and interpretation to answer key questions or solve specific problems.
+</p>
 
 <div class="project-container">
     
@@ -22,6 +23,7 @@ description: "A collection of Anup Acharya's data analysis projects demonstratin
         </div>
       </div>
       <p class="project-objective"><strong>Objective:</strong> To explore relationships between diamond attributes and price, identifying key drivers and patterns for predictive understanding.</p>
+      <p class="project-key-result"><strong>Key Finding:</strong> Carat weight is dominant, but price-per-volume normalizes quality-price trends. [Add brief model metric if applicable, e.g., R-squared: 0.XX].</p>
       <span class="project-details-indicator">View Full Analysis →</span>
     </div>
   </a>
@@ -38,6 +40,7 @@ description: "A collection of Anup Acharya's data analysis projects demonstratin
         </div>
       </div>
       <p class="project-objective"><strong>Objective:</strong> To analyze global demographic trends (distribution, growth, density) and identify significant regional patterns over time.</p>
+      <p class="project-key-result"><strong>Key Insight:</strong> Uncovered significant disparities in growth sustainability, highlighting [mention a brief, specific finding, e.g., rapid urbanization in X regions].</p>
       <span class="project-details-indicator">View Visualizations →</span>
     </div>
   </a>
@@ -54,11 +57,11 @@ description: "A collection of Anup Acharya's data analysis projects demonstratin
         </div>
       </div>
       <p class="project-objective"><strong>Objective:</strong> To conduct time-series analysis of Bank of America's stock, focusing on volatility modeling and financial market characteristics.</p>
+      <p class="project-key-result"><strong>Key Outcome:</strong> Successfully modeled volatility clusters (GARCH β1=0.86), providing insights for risk assessment. Emphasized data validation importance.</p>
       <span class="project-details-indicator">View Modeling Details →</span>
     </div>
   </a>
 
-  <!-- Project IV - Card not wrapped in a link -->
   <div class="project-box no-link"> 
     <span class="project-number">Project IV</span>
     <div class="project-header"> 
@@ -69,6 +72,7 @@ description: "A collection of Anup Acharya's data analysis projects demonstratin
         </div>
     </div>
     <p class="project-objective"><strong>Objective:</strong> To develop a predictive model for daily bike rental demand to help optimize inventory and operations for a city bike-sharing program.</p>
+    <p class="project-key-result"><strong>Key Result:</strong> MLM model achieved R-squared of [e.g., 0.75], providing actionable daily demand forecasts. [Add specific MAE if available].</p>
   </div>
 
 </div>
