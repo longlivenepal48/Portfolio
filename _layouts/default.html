@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  {% seo %} <!-- Using jekyll-seo-tag directly. It will handle title, meta descriptions, OG tags, etc. -->
+  {% seo %} <!-- jekyll-seo-tag will use title, description, url, baseurl from _config.yml and page front matter -->
 
   <!-- Google Fonts: Poppins & Open Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
+  <!-- Favicon -->
   <link rel="icon" href="{{ '/assets/images/Logo_Anup_Acharya.png' | relative_url }}" type="image/png">
   
+  <!-- Atom Feed Link (if jekyll-feed plugin is used) -->
   {% if site.plugins contains "jekyll-feed" %}
     <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
   {% endif %}
@@ -27,28 +31,29 @@
     <div class="container header-content">
       <div class="header-left">
         <a href="{{ '/' | relative_url }}" class="logo-link">
-          <h1>{{ site.title | split: " - " | first | escape }}</h1> 
+          <!-- Using author_name from _config.yml for the header display -->
+          <h1>{{ site.author_name | escape }}</h1> 
         </a>
         <p class="subtitle">Chartered Accountant | CPA | Certified Analyst</p>
       </div>
       <div class="header-right">
         <div class="header-contact">
-          <a class="header-link" href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer" aria-label="Email Anup Acharya">
+          <a class="header-link" href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer" aria-label="Email {{ site.author_name | escape }}">
             <i class="fas fa-envelope"></i><span>Email</span>
           </a>
-          <a class="header-link" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="Anup Acharya's GitHub Profile">
+          <a class="header-link" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="{{ site.author_name | escape }}'s GitHub Profile">
             <i class="fab fa-github"></i><span>GitHub</span>
           </a>
-          <a class="header-link" href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="Anup Acharya's LinkedIn Profile">
+          <a class="header-link" href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="{{ site.author_name | escape }}'s LinkedIn Profile">
             <i class="fab fa-linkedin"></i><span>LinkedIn</span>
           </a>
         </div>
         <nav class="main-navigation">
           <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a>
-          <a href="{{ '/introduction' | relative_url }}"><i class="fas fa-user"></i> Introduction</a>
-          <a href="{{ '/data-analysis' | relative_url }}"><i class="fas fa-chart-simple"></i> Data Analysis</a>
-          <a href="{{ '/big-data' | relative_url }}"><i class="fas fa-database"></i> Big Data</a>
-          <a href="{{ '/kaggle' | relative_url }}"><i class="fab fa-kaggle"></i> Kaggle</a>
+          <a href="{{ '/introduction/' | relative_url }}"><i class="fas fa-user"></i> Introduction</a>
+          <a href="{{ '/data-analysis/' | relative_url }}"><i class="fas fa-chart-simple"></i> Data Analysis</a>
+          <a href="{{ '/big-data/' | relative_url }}"><i class="fas fa-database"></i> Big Data</a>
+          <a href="{{ '/kaggle/' | relative_url }}"><i class="fab fa-kaggle"></i> Kaggle</a>
         </nav>
       </div>
     </div>
@@ -68,7 +73,7 @@
         </button>
       </div>
       <div class="footer-right">
-        © <span id="currentYear"></span> {{ site.title | split: " - " | first | escape }}. All rights reserved. 
+        © <span id="currentYear"></span> {{ site.author_name | escape }}. All rights reserved. 
       </div>
     </div>
   </footer>
@@ -81,7 +86,8 @@
         if (window.history.length > 1 && document.referrer !== '' && document.referrer !== window.location.href) {
           window.history.back();
         } else {
-          window.location.href = '{{ "/" | relative_url }}'; // fallback to homepage
+          // Fallback to homepage, ensuring baseurl is respected
+          window.location.href = '{{ "/" | relative_url }}'; 
         }
       });
     }

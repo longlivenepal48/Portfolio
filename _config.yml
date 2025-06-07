@@ -1,32 +1,43 @@
 # _config.yml
 
-# Your existing title, email, description, baseurl, url, etc. should remain here
-title: CA. Anup Acharya - Data Science Portfolio
-email: longlivenepal48@gmail.com
-description: >-
+# Site settings
+# These are used to personalize your new site.
+title: "CA. Anup Acharya - Data Science Portfolio" # Full title for browser, SEO
+author_name: "CA. Anup Acharya" # Shorter name for display in header/footer
+email: "longlivenepal48@gmail.com"
+description: >- # this means to ignore newlines until "baseurl:"
   Anup Acharya's professional data science portfolio, showcasing CV, 
   data analysis projects, big data expertise, and Kaggle competition entries.
-baseurl: "/anup_portfolio" # Crucial: Ensure this matches your GitHub Pages subpath
-url: "https://longlivenepal48.github.io" # Crucial: Your GitHub Pages domain
 
-github_username: longlivenepal48
-# github_repo: anup_portfolio # Optional, can be derived
-linkedin_username: ca-anup-acharya-761737ba
+# URL and BaseURL settings - CRITICAL for GitHub Pages
+# Your site is hosted at: https://longlivenepal48.github.io/portfolio/
+url: "https://longlivenepal48.github.io" # This is the root domain for your GitHub Pages. DO NOT include /portfolio here.
+baseurl: "/portfolio" # This is the subpath for your specific repository. MUST start with a forward slash.
+
+# GitHub specific (optional, but can be used by themes or plugins)
+github_username: "longlivenepal48"
+# github_repo: "portfolio" # This can be inferred, not strictly needed if baseurl is correct
+
+# Social links (used in _layouts/default.html)
+linkedin_username: "ca-anup-acharya-761737ba" # Just the username part from the LinkedIn URL
 
 # Build settings
-markdown: kramdown # Ensure kramdown is specified if you added it to Gemfile
-theme: null       # Since you have custom styling
+markdown: kramdown
+theme: null # We are using custom styling
 
+# Plugins - Ensure these are correctly listed and also in your Gemfile
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag # This line is key
+  - jekyll-seo-tag
 
 # Exclude from processing.
+# The following items will not be processed, by default.
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/      # Bundler's typical install path if specified
-  # - README.md  # Uncomment if you don't want README.md built into an HTML page
-  # - LICENSE    # Uncomment if you don't want LICENSE built into an HTML page
+  - node_modules/
+  - vendor/
+  - README.md 
+  - LICENSE.md # If you have a LICENSE.md 
+  - "*.Rmd" # Uncomment if Rmd files are ONLY for generating HTML separately and NOT Jekyll pages
