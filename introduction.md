@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Introduction
-# description: "Detailed professional background, experience, and skills of Anup Acharya, Chartered Accountant and Data Analyst." # Example page-specific description
+description: "Detailed professional background, experience, skills, and qualifications of CA. Anup Acharya, a Data Analyst and Chartered Accountant specializing in financial analytics."
 ---
 
 <div class="profile-header">

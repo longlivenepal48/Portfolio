@@ -1,4 +1,4 @@
-/* style.css - Portfolio Overhaul v2.2 - Global Justification for P and LI */
+/* style.css - Portfolio Overhaul v2.4.1 - DEFINITELY FULL VERSION - Adaptive Mobile Navigation */
 
 /* --------------------
  * Table of Contents
@@ -7,26 +7,23 @@
  * 2.  Global Resets & Base Styles
  * 3.  Typography (Global P & LI Justification)
  * 4.  Layout & Container
- * 5.  Header & Navigation (Desktop & Mobile)
+ * 5.  Header & Navigation (Desktop & Adaptive Mobile)
  * 6.  Main Content & Page Titles
  * 7.  Project Cards & Grid (Clickable, Hover Effects)
  * 8.  Featured Sections (Homepage)
  * 9.  Introduction Page Specifics
- * 10. Footer
+ * 10. Footer (Slimmed & Repositioned Button)
  * 11. Utility Classes
  * 12. Accessibility (Skip Links, Focus Styles)
- * 13. Dark Mode (Foundation)
+ * 13. Responsive Design (Focus on Adaptive Nav)
+ * 14. Dark Mode (Foundation)
  * --------------------
  */
 
 /* --------------------
- * 1. CSS Variables & Font Imports
+ * 1. CSS Variables & Font Imports 
  * --------------------
  */
-
-/* Google Fonts are imported in _layouts/default.html */
-/* Selected fonts: 'Roboto Slab' for headings, 'Inter' for body */
-
 :root {
   /* Color Palette - Professional, Modern, with a touch of warmth */
   --color-primary: #1D3557;        /* Deep Blue - Strong text, backgrounds */
@@ -66,7 +63,6 @@
   /* RGB versions for box-shadow alpha */
   --color-secondary-rgb: 69, 123, 157; 
 }
-/* Dark mode RGB variable will be set in dark mode media query */
 
 
 /* --------------------
@@ -116,7 +112,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--font-line-height-heading);
   margin-bottom: calc(var(--spacing-unit) * 0.75);
   font-weight: 700;
-  /* Headings are generally not justified */
 }
 
 h1 { font-size: 2.5rem; margin-bottom: var(--spacing-unit); } 
@@ -124,7 +119,7 @@ h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; } 
 h4 { font-size: 1.25rem; } 
 
-p { /* Global justification for paragraphs */
+p {
   margin-bottom: var(--spacing-unit);
   text-align: justify;
   -webkit-hyphens: auto;
@@ -133,7 +128,7 @@ p { /* Global justification for paragraphs */
   hyphens: auto;
 }
 
-a { /* General link styling */
+a {
   color: var(--color-secondary);
   text-decoration: none;
   transition: var(--transition-fast);
@@ -143,17 +138,15 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-ul, ol { /* Base styling for lists */
+ul, ol {
   margin-bottom: var(--spacing-unit);
-  padding-left: calc(var(--spacing-unit) * 1.5); /* Standard indent */
+  padding-left: calc(var(--spacing-unit) * 1.5); 
 }
 
-li { /* Base styling for list items */
+li {
   margin-bottom: calc(var(--spacing-unit) * 0.25);
 }
 
-/* Justify text directly inside list items within the main content area */
-/* Excludes navigation menus or other specific lists if they have distinct classes */
 .main-content-area ul:not(.nav-menu) > li,
 .main-content-area ol > li {
   text-align: justify;
@@ -162,11 +155,8 @@ li { /* Base styling for list items */
   -ms-hyphens: auto;
   hyphens: auto;
 }
-/* Note: If a <li> contains a <p>, that <p> is already covered by the global 'p' rule. */
-/* This targets text that is a direct child of <li>. */
 
-
-strong { font-weight: 600; } /* Use semibold for strong */
+strong { font-weight: 600; }
 
 blockquote {
   border-left: 4px solid var(--color-warm-accent);
@@ -176,6 +166,18 @@ blockquote {
   color: var(--color-text-muted);
   font-style: italic;
 }
+
+code, pre {
+  font-family: 'SF Mono', Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
+  background-color: #e9ecef; 
+  border-radius: var(--border-radius);
+  color: #212529; 
+}
+pre { padding: var(--spacing-unit); overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; border: 1px solid var(--color-border); }
+code { padding: 0.2em 0.4em; }
+
+hr { border: 0; border-top: 1px solid var(--color-border); margin: calc(var(--spacing-unit) * 2.5) 0; }
 
 /* --------------------
  * 4. Layout & Container
@@ -189,7 +191,7 @@ blockquote {
 }
 
 /* --------------------
- * 5. Header & Navigation
+ * 5. Header & Navigation (Adaptive Mobile Nav)
  * --------------------
  */
 .site-header {
@@ -206,8 +208,12 @@ blockquote {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
+.site-branding {
+  margin-right: var(--spacing-unit); /* Space between branding and nav/social */
+}
 .site-branding .site-title-link {
   font-family: var(--font-family-heading);
   font-size: 1.75rem;
@@ -215,6 +221,7 @@ blockquote {
   color: var(--color-primary);
   text-decoration: none;
   transition: var(--transition-fast);
+  display: block; 
 }
 .site-branding .site-title-link:hover {
   color: var(--color-secondary);
@@ -226,26 +233,39 @@ blockquote {
   letter-spacing: 0.5px;
 }
 
+.main-navigation {
+  /* flex-grow: 1; Remove this to prevent it from pushing social links too far when wrapping */
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center; /* Align nav items with social links if on same line */
+}
 .main-navigation .nav-menu {
   list-style: none;
   padding-left: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap; 
+  justify-content: flex-end; 
 }
 .main-navigation .nav-menu li {
-  margin-left: calc(var(--spacing-unit) * 1.25); 
-  margin-bottom: 0; /* Override default li margin */
+  margin-left: calc(var(--spacing-unit) * 0.5); 
+  margin-bottom: 0; 
+}
+.main-navigation .nav-menu li:first-child {
+    margin-left: 0; 
 }
 .main-navigation .nav-menu a {
   font-family: var(--font-family-body);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.9rem; 
   color: var(--color-primary);
   text-decoration: none;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem; 
   border-radius: var(--border-radius);
   transition: var(--transition-base);
   position: relative; 
+  display: inline-block; 
+  white-space: nowrap; 
 }
 .main-navigation .nav-menu a:hover,
 .main-navigation .nav-menu a:focus,
@@ -254,7 +274,7 @@ blockquote {
   color: var(--color-surface);
 }
 .main-navigation .nav-menu a i {
-  margin-right: 0.4em;
+  margin-right: 0.3em; 
 }
 
 .header-social-links {
@@ -273,34 +293,9 @@ blockquote {
   transform: scale(1.1);
 }
 
-/* Mobile Menu Toggle */
+/* Menu Toggle is NOT used for adaptive approach, hide it */
 .menu-toggle {
-  display: none; 
-  background: none;
-  border: none;
-  color: var(--color-primary);
-  font-size: 1.5rem; 
-  cursor: pointer;
-  padding: 0.5rem;
-  z-index: 1001; 
-}
-.menu-toggle .icon-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background-color: var(--color-primary);
-  border-radius: 1px;
-  margin: 4px 0;
-  transition: var(--transition-base);
-}
-.menu-toggle.is-active .icon-bar:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-.menu-toggle.is-active .icon-bar:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.is-active .icon-bar:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
+  display: none !important; 
 }
 
 
@@ -330,15 +325,14 @@ blockquote {
   border-radius: 2px;
 }
 
-.section-intro { /* Paragraphs inside here will be justified */
+.section-intro { 
   font-size: 1.1rem;
   color: var(--color-text-muted);
-  text-align: center; /* Center the block, text inside will be justified */
+  text-align: center; 
   max-width: 700px;
   margin: 0 auto calc(var(--spacing-unit) * 2.5);
   line-height: 1.8;
 }
-
 
 /* --------------------
  * 7. Project Cards & Grid
@@ -349,7 +343,6 @@ blockquote {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: calc(var(--spacing-unit) * 1.75);
 }
-
 a.project-box-link {
   display: block; 
   text-decoration: none;
@@ -367,7 +360,6 @@ a.project-box-link:focus-within {
 a.project-box-link:focus-within {
   box-shadow: var(--shadow-lg), 0 0 0 3px var(--color-secondary); 
 }
-
 .project-box {
   background-color: var(--color-surface);
   border-radius: var(--border-radius);
@@ -377,7 +369,6 @@ a.project-box-link:focus-within {
   flex-direction: column;
   border: 1px solid var(--color-border);
 }
-
 .project-box .project-number {
   font-size: 0.75rem;
   font-weight: 700;
@@ -386,7 +377,6 @@ a.project-box-link:focus-within {
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
 }
-
 .project-header {
   display: flex;
   align-items: center;
@@ -401,23 +391,22 @@ a.project-box-link:focus-within {
   padding: 0.25rem;
   background-color: var(--color-light-accent); 
 }
-.project-header-text h3 { /* Not justified */
+.project-header-text h3 {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 0.1rem;
   line-height: 1.2;
-  text-align: left; /* Ensure headings in cards are not justified */
+  text-align: left; 
 }
 .project-header-text .tools-used,
-.project-header-text .dataset-title { /* Not justified */
+.project-header-text .dataset-title {
   font-size: 0.8rem;
   color: var(--color-text-muted);
   line-height: 1.3;
   text-align: left;
 }
-
-.project-box .project-objective { /* This is a <p> tag, will be justified */
+.project-box .project-objective { 
   font-size: 0.95rem;
   color: var(--color-text-base);
   margin-bottom: var(--spacing-unit); 
@@ -427,8 +416,7 @@ a.project-box-link:focus-within {
   font-weight: 600;
   color: var(--color-primary);
 }
-
-.project-box .project-key-result { /* This is a <p> tag, will be justified */
+.project-box .project-key-result { 
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-secondary);
@@ -436,8 +424,7 @@ a.project-box-link:focus-within {
   padding-top: var(--spacing-unit);
   border-top: 1px dashed var(--color-border);
 }
-
-.project-box .project-details-indicator { /* Not justified */
+.project-box .project-details-indicator {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-accent);
@@ -450,8 +437,6 @@ a.project-box-link:focus-within {
 a.project-box-link:hover .project-details-indicator {
   transform: translateX(4px);
 }
-
-/* If a project box is not a link */
 div.project-box.no-link {
   box-shadow: var(--shadow-md);
   transition: var(--transition-base);
@@ -492,7 +477,7 @@ a.featured-section:focus-within {
 a.featured-section:focus-within {
   box-shadow: var(--shadow-lg), 0 0 0 2px var(--color-secondary);
 }
-.featured-section h3 { /* Not justified */
+.featured-section h3 {
   font-size: 1.3rem;
   color: var(--color-primary);
   margin-bottom: 0.5rem;
@@ -505,11 +490,28 @@ a.featured-section:focus-within {
   margin-right: 0.5em;
   font-size: 1.2em;
 }
-.featured-section p { /* This <p> will be justified by global rule */
+.featured-section p { 
   font-size: 0.9rem;
   color: var(--color-text-muted);
   line-height: 1.6;
 }
+
+/* Homepage - Portfolio Sections Overview (From previous step) */
+.portfolio-sections-overview {
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  padding: var(--spacing-unit) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.portfolio-sections-overview > div {
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+.portfolio-sections-overview > div:last-child { margin-bottom: 0; }
+.portfolio-sections-overview h3 { font-size: 1.3rem; margin-bottom: calc(var(--spacing-unit) * 0.5); text-align: left; }
+.portfolio-sections-overview h3 a { color: var(--color-primary); text-decoration: none; transition: var(--transition-fast); }
+.portfolio-sections-overview h3 a:hover { color: var(--color-accent); text-decoration: underline; }
+.portfolio-sections-overview h3 i { margin-right: 0.5em; color: var(--color-secondary); }
+.portfolio-sections-overview p { font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6; margin-left: 2.0em; /* Will be justified by global p rule */ }
 
 
 /* --------------------
@@ -534,12 +536,12 @@ a.featured-section:focus-within {
   border: 3px solid var(--color-surface);
   box-shadow: var(--shadow-md);
 }
-.profile-info h2 { /* Not justified */
+.profile-info h2 {
   font-size: 2rem; 
   margin-bottom: 0.1rem;
   text-align: left;
 }
-.profile-info .tagline { /* This is a <p>, will be justified */
+.profile-info .tagline { 
   font-size: 1rem;
   color: var(--color-secondary);
   font-weight: 500;
@@ -555,7 +557,7 @@ a.featured-section:focus-within {
 .introduction-contact-icons a:hover img {
   opacity: 1; transform: scale(1.1);
 }
-.intro-pitch { /* This is a <p>, will be justified */
+.intro-pitch { 
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--color-text-base);
@@ -566,55 +568,61 @@ a.featured-section:focus-within {
   box-shadow: var(--shadow-sm);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
-/* Custom bullets for lists in main content for better visual */
-/* Text inside these <li> will be justified by the new rule */
 .main-content-area ul:not(.nav-menu) > li::before {
   content: "\2022"; 
   color: var(--color-secondary);
   font-weight: bold;
   display: inline-block;
   width: 1em;
-  margin-left: -1.5em; /* Adjust to align with padding of ul */
-  /* position: absolute; /* Removing absolute positioning for flow */
-  /* left: 0.2em; */
+  margin-left: -1.5em; 
 }
 
 
 /* --------------------
- * 10. Footer
+ * 10. Footer (Slimmed & Repositioned Button)
  * --------------------
  */
 .site-footer {
   background-color: var(--color-primary);
   color: var(--color-text-on-dark);
-  padding: calc(var(--spacing-unit) * 1.5) 0; /* REDUCED: Was 2.5 units */
+  padding: calc(var(--spacing-unit) * 1.2) 0; 
   margin-top: auto; 
-  font-size: 0.8rem; /* REDUCED: Was 0.9rem */
+  font-size: 0.75rem; 
 }
 .footer-content-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
-  flex-wrap: wrap;
-  gap: calc(var(--spacing-unit) * 0.75); /* REDUCED: Was 1 unit */
+  flex-wrap: wrap; 
+  gap: calc(var(--spacing-unit) * 0.5); 
+}
+.footer-copyright {
+  margin-right: auto; 
 }
 .footer-copyright p { 
   margin: 0;
+  text-align: left; 
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+.footer-back-button {
+  margin-left: auto; 
 }
 .footer-back-button button#backBtn {
   background-color: var(--color-secondary);
   color: var(--color-surface);
   border: none;
-  padding: 0.4em 1em; /* REDUCED: Was 0.6em 1.2em */
+  padding: 0.35em 0.8em; 
   border-radius: var(--border-radius);
-  font-weight: 500; /* REDUCED: Was 600 */
-  font-size: 0.8rem; /* REDUCED: Was 0.9rem - matches new .site-footer fs */
+  font-weight: 500; 
+  font-size: 0.75rem; 
   cursor: pointer;
   transition: var(--transition-base);
 }
 .footer-back-button button#backBtn:hover {
   background-color: var(--color-accent);
-  transform: translateY(-2px);
+  transform: translateY(-1px); 
 }
 
 /* --------------------
@@ -634,13 +642,11 @@ a.featured-section:focus-within {
 }
 .text-center { text-align: center !important; }
 .text-left { 
-  text-align: left !important;
-  -webkit-hyphens: none !important;
-  hyphens: none !important;
+  text-align: left !important; 
+  -webkit-hyphens: none;
+  hyphens: none !important; 
 }
 
-
-/* Skip to content link styling */
 .skip-to-content-link {
   position: absolute;
   left: -9999px; 
@@ -676,67 +682,46 @@ a.featured-section:focus-within {
 }
 a.project-box-link:focus-visible,
 a.featured-section:focus-visible {
-  outline: none; /* Custom focus already handled by focus-within on parent */
+  outline: none; 
 }
 
 
 /* --------------------
- * Responsive Overrides (Mobile Navigation)
+ * 13. Responsive Design (Adaptive Mobile Nav)
  * --------------------
  */
-@media (max-width: 850px) { 
-  .menu-toggle {
-    display: block;
+@media (max-width: 950px) { 
+  .site-branding {
+    margin-bottom: calc(var(--spacing-unit) * 0.5); 
   }
   .main-navigation {
     width: 100%; 
-    order: 3; 
-    margin-top: var(--spacing-unit); 
+    justify-content: center; 
+    margin-top: calc(var(--spacing-unit) * 0.5); 
+    order: 3; /* Ensure it comes after branding and social links if they are on same line initially */
   }
   .main-navigation .nav-menu {
-    display: none; 
-    flex-direction: column;
-    width: 100%; 
-  }
-  .main-navigation .nav-menu.is-active {
-    display: flex; 
-    position: absolute; 
-    top: 100%; 
-    left: 0;
-    right: 0;
-    background-color: var(--color-surface);
-    box-shadow: var(--shadow-md);
-    padding: var(--spacing-unit) 0;
-    border-top: 1px solid var(--color-border);
-    z-index: 999; 
+    justify-content: center; 
+    gap: calc(var(--spacing-unit) * 0.25); 
   }
   .main-navigation .nav-menu li {
-    margin-left: 0;
-    width: 100%;
+    margin-left: 0; 
   }
   .main-navigation .nav-menu a {
-    display: block;
-    padding: var(--spacing-unit);
-    text-align: left;
-    border-bottom: 1px solid var(--color-border);
-    border-radius: 0;
-  }
-  .main-navigation .nav-menu li:last-child a {
-    border-bottom: none;
+    font-size: 0.85rem; 
+    padding: 0.4rem 0.6rem; 
   }
   .header-social-links {
-    margin-left: auto; 
-    padding-right: 0; 
-  }
-  .header-content-wrapper {
-     flex-wrap: wrap; 
-  }
-  .site-branding {
-    flex-grow: 1; 
+     margin-top: calc(var(--spacing-unit) * 0.5);
+     width: 100%;
+     justify-content: center;
+     margin-left: 0;
+     order: 2; /* Social links before nav when wrapped */
   }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 768px) { 
   .container { width: 95%; }
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
@@ -744,110 +729,123 @@ a.featured-section:focus-visible {
   .profile-header { flex-direction: column; text-align: center; }
   .profile-info { text-align: center; }
   .introduction-contact-icons { justify-content: center; }
-  .footer-content-wrapper { flex-direction: column; text-align: center; gap: var(--spacing-unit) * 1.5; }
-  .footer-copyright { margin-bottom: 0; order: 1; }
-  .footer-back-button { order: 2; }
-  .footer-navigation { order: 3; }
+  
+  .main-navigation .nav-menu a {
+    font-size: 0.8rem; 
+    padding: 0.3rem 0.5rem; 
+  }
+  .main-navigation .nav-menu a i {
+    display: none; 
+  }
+  .header-social-links {
+     display: none; 
+  }
+  .site-branding {
+    text-align: center; 
+    width: 100%;
+    margin-bottom: calc(var(--spacing-unit) * 0.75);
+  }
+  .header-content-wrapper {
+    justify-content: center; 
+  }
+
+
+  .footer-content-wrapper { 
+    flex-direction: column; 
+    text-align: center; 
+    gap: calc(var(--spacing-unit) * 0.75); 
+  }
+  .footer-copyright { 
+    order: 2; 
+    width: 100%; 
+    margin-bottom: 0;
+  }
+  .footer-back-button { 
+    order: 1; 
+    width: 100%; 
+    display: flex;
+    justify-content: center; /* Center button on mobile */
+  }
+   .footer-navigation { order: 3; } 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { 
   :root { --font-base-size: 15px; } 
   .site-branding .site-title-link { font-size: 1.5rem; }
   .site-branding .site-tagline { font-size: 0.75rem; }
   .project-header img { width: 40px; height: 40px; }
   .project-header-text h3 { font-size: 1.1rem; }
-  .header-social-links { display: none; }
+
+  .main-navigation .nav-menu {
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .main-navigation .nav-menu li {
+    width: 80%; 
+    text-align: center;
+  }
+  .main-navigation .nav-menu a {
+    display: block; 
+    padding: 0.5rem; 
+    border-bottom: 1px solid var(--color-border);
+  }
+  .main-navigation .nav-menu li:last-child a {
+    border-bottom: none;
+  }
 }
 
 
 /* --------------------
- * 13. Dark Mode (Foundation) - Using new palette
+ * 14. Dark Mode
  * --------------------
  */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #A6D4FA;        
-    --color-secondary: #82C0E7;      
-    --color-accent: #FF6B6B;         
-    --color-light-accent: #1A2A3A;   
-    --color-warm-accent: #4A90A0;    
-
-    --color-text-base: #E0E5EA;       
-    --color-text-muted: #9FB3C8;      
-    --color-text-on-dark: #0D1B2A;    
-    --color-background: #0D1B2A;      
-    --color-surface: #1C2E42;         
-    --color-border: #3A506B;          
-
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
-
+    --color-primary: #A6D4FA; --color-secondary: #82C0E7; --color-accent: #FF6B6B;
+    --color-light-accent: #1A2A3A; --color-warm-accent: #4A90A0;
+    --color-text-base: #E0E5EA; --color-text-muted: #9FB3C8; --color-text-on-dark: #0D1B2A;
+    --color-background: #0D1B2A; --color-surface: #1C2E42; --color-border: #3A506B;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.2); --shadow-md: 0 5px 15px rgba(0,0,0,0.3); --shadow-lg: 0 10px 30px rgba(0,0,0,0.4);
     --color-secondary-rgb: 130, 192, 231; 
   }
-
-  body {
-    background-color: var(--color-background);
-    color: var(--color-text-base);
-  }
+  body { background-color: var(--color-background); color: var(--color-text-base); }
   a { color: var(--color-secondary); }
   a:hover, a:focus { color: var(--color-accent); }
-
-  h1, h2, h3, h4, h5, h6 { color: var(--color-primary); }
+  h1,h2,h3,h4,h5,h6 { color: var(--color-primary); }
   strong { color: var(--color-primary); }
-
-  code, pre { background-color: var(--color-light-accent); color: var(--color-text-base); border-color: var(--color-border); }
+  code,pre { background-color: var(--color-light-accent); color: var(--color-text-base); border-color: var(--color-border); }
   blockquote { background-color: var(--color-light-accent); border-left-color: var(--color-warm-accent); color: var(--color-text-muted); }
-
   .site-header { background-color: var(--color-surface); border-bottom-color: var(--color-border); }
   .site-branding .site-title-link { color: var(--color-primary); }
   .site-branding .site-title-link:hover { color: var(--color-secondary); }
   .site-branding .site-tagline { color: var(--color-text-muted); }
   .main-navigation .nav-menu a { color: var(--color-primary); }
-  .main-navigation .nav-menu a:hover,
-  .main-navigation .nav-menu a:focus,
-  .main-navigation .nav-menu a.active {
-    background-color: var(--color-secondary);
-    color: var(--color-background); 
-  }
+  .main-navigation .nav-menu a:hover, .main-navigation .nav-menu a:focus, .main-navigation .nav-menu a.active { background-color: var(--color-secondary); color: var(--color-background); }
   .header-social-links .social-icon { color: var(--color-text-muted); }
   .header-social-links .social-icon:hover { color: var(--color-secondary); }
-  .menu-toggle { color: var(--color-primary); }
-  .menu-toggle .icon-bar { background-color: var(--color-primary); }
-  @media (max-width: 850px) {
-    .main-navigation .nav-menu.is-active { background-color: var(--color-surface); border-top-color: var(--color-border); }
-    .main-navigation .nav-menu a { border-bottom-color: var(--color-border); }
-  }
-
+  @media (max-width: 480px) { .main-navigation .nav-menu a { border-bottom-color: var(--color-border); } }
 
   .page-content > h1:first-child::after { background-color: var(--color-accent); }
   .section-intro { color: var(--color-text-muted); }
-
-  .project-box { background-color: var(--color-surface); border-color: var(--color-border); }
-  div.project-box.no-link { background-color: var(--color-surface); border-color: var(--color-border); }
+  .project-box, div.project-box.no-link { background-color: var(--color-surface); border-color: var(--color-border); }
   .project-header img { background-color: var(--color-light-accent); } 
   .project-header-text h3 { color: var(--color-primary); }
-  .project-header-text .tools-used,
-  .project-header-text .dataset-title { color: var(--color-text-muted); }
+  .project-header-text .tools-used, .project-header-text .dataset-title { color: var(--color-text-muted); }
   .project-box .project-objective { color: var(--color-text-base); }
   .project-box .project-objective strong { color: var(--color-primary); }
   .project-box .project-key-result { color: var(--color-secondary); border-top-color: var(--color-border); }
   .project-box .project-details-indicator { color: var(--color-accent); }
   a.project-box-link:hover .project-details-indicator { color: var(--color-primary); }
-
   .featured-section { background-color: var(--color-surface); color: var(--color-text-base); }
   a.featured-section:hover, a.featured-section:focus-within { border-left-color: var(--color-accent); }
   .featured-section h3 { color: var(--color-primary); }
   .featured-section h3 i { color: var(--color-secondary); }
   .featured-section p { color: var(--color-text-muted); }
-
   .profile-header { background-color: var(--color-light-accent); }
   .profile-image { border-color: var(--color-surface); }
   .profile-info .tagline { color: var(--color-secondary); }
   .intro-pitch { background-color: var(--color-surface); border-left-color: var(--color-accent); }
   .main-content-area ul:not(.nav-menu) > li::before { color: var(--color-secondary); }
-
-
   .site-footer { background-color: var(--color-primary); color: var(--color-text-on-dark); } 
   .footer-back-button button#backBtn { background-color: var(--color-secondary); color: var(--color-background); }
   .footer-back-button button#backBtn:hover { background-color: var(--color-accent); }

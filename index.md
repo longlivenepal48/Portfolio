@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Home
-# You can add a specific page description for SEO if desired for the homepage:
-# description: "Welcome to Anup Acharya's Data Science Portfolio. Explore projects in data analysis, big data, and Kaggle competition entries."
+description: "Welcome to Anup Acharya's Data Science Portfolio. Explore projects in data analysis, big data, and Kaggle competition entries, demonstrating expertise in finance and analytics."
 ---
 
 # Welcome to My Professional Portfolio
@@ -11,7 +10,25 @@ title: Home
   I'm a strategic financial professional with expertise in financial analysis, audit management, and data analytics. My background combines traditional accounting with modern data analysis techniques to uncover insights and drive business value.
 </p>
 
+## Portfolio Sections Overview
+
+<div class="portfolio-sections-overview">
+  <div>
+    <h3><a href="{{ '/data-analysis.html' | relative_url }}"><i class="fas fa-chart-line"></i> Data Analysis Projects</a></h3>
+    <p>This section showcases my ability to extract insights from diverse datasets using tools like R and Python. Each project demonstrates a systematic approach to data cleaning, analysis, visualization, and interpretation to answer key questions or solve specific problems.</p>
+  </div>
+  <div>
+    <h3><a href="{{ '/big-data.html' | relative_url }}"><i class="fas fa-server"></i> Big Data Projects</a></h3>
+    <p>These projects highlight my experience in designing, implementing, and leveraging big data solutions to handle large-scale datasets, streamline processes, and extract valuable business intelligence.</p>
+  </div>
+  <div>
+    <h3><a href="{{ '/kaggle.html' | relative_url }}"><i class="fab fa-kaggle"></i> Kaggle Projects</a></h3>
+    <p>My participation in Kaggle competitions demonstrates my passion for tackling complex predictive modeling challenges, experimenting with advanced machine learning techniques, and continuously honing my analytical skills in a competitive environment.</p>
+  </div>
+</div>
+
 ## Featured Sections
+<p class="section-intro">Click below to explore different facets of my work:</p>
 <div class="featured-sections-container">
     <a href="{{ '/introduction.html' | relative_url }}" class="featured-section">
         <h3><i class="fas fa-user-tie"></i> About Me</h3>

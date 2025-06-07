@@ -1,14 +1,12 @@
 ---
 layout: default
 title: Kaggle Competitions
-# description: "Anup Acharya's Kaggle competition entries, showcasing machine learning models, feature engineering techniques, and performance in predictive analytics challenges."
+description: "Anup Acharya's Kaggle competition entries, showcasing machine learning models, feature engineering techniques, and performance in predictive analytics challenges."
 ---
 
 # Kaggle Competition Highlights
 
-<p class="section-intro">
-  My participation in Kaggle competitions demonstrates my passion for tackling complex predictive modeling challenges, experimenting with advanced machine learning techniques, and continuously honing my analytical skills in a competitive environment.
-</p>
+<!-- The introductory paragraph for this section has been moved to index.md -->
 
 <div class="project-container">
 
@@ -46,8 +44,7 @@ title: Kaggle Competitions
     </div>
   </a>
 
-  <!-- If this project has a public link (e.g., Kaggle Kernel, blog post, Tableau Public) make it a link -->
-  <a href="[YOUR_LINK_FOR_NEPAL_ECONOMIC_ANALYSIS_IF_ANY]" target="_blank" rel="noopener noreferrer" class="project-box-link">
+  <a href="[YOUR_LINK_FOR_NEPAL_ECONOMIC_ANALYSIS_IF_ANY]" target="_blank" rel="noopener noreferrer" class="project-box-link"> 
     <div class="project-box">
     <span class="project-number">Project III</span>
      <div class="project-header">
@@ -59,7 +56,7 @@ title: Kaggle Competitions
         </div>
     </div>
     <p class="project-objective"><strong>Objective:</strong> To conduct an in-depth exploratory data analysis (EDA) of Nepal's economic trends (2015-2024), with a focus on the tourism and hospitality sectors, to uncover growth patterns and correlations.</p>
-    <p class="project-key-result"><strong>Key Contribution:</strong> Published an interactive Tableau Public dashboard and report summarizing key economic trends and tourism sector impacts. ([Link to dashboard/report within text if not linking whole card]).</p>
+    <p class="project-key-result"><strong>Key Contribution:</strong> Published an interactive Tableau Public dashboard and report summarizing key economic trends and tourism sector impacts. ([Link to dashboard/report within text if desired and whole card isn't linked, or if linked, this text reinforces it]).</p>
     <span class="project-details-indicator">View Report/Dashboard →</span>
     </div>
   </a>

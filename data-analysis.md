@@ -1,14 +1,12 @@
 ---
 layout: default
 title: Data Analysis Projects
-# description: "A collection of Anup Acharya's data analysis projects demonstrating skills in R, Python, SQL, and data visualization for deriving insights."
+description: "A collection of Anup Acharya's data analysis projects demonstrating skills in R, Python, SQL, and data visualization for deriving insights from complex datasets." 
 ---
 
 # Data Analysis Projects
 
-<p class="section-intro">
-  This section showcases my ability to extract insights from diverse datasets using tools like R and Python. Each project demonstrates a systematic approach to data cleaning, analysis, visualization, and interpretation to answer key questions or solve specific problems.
-</p>
+<!-- The introductory paragraph for this section has been moved to index.md -->
 
 <div class="project-container">
     
@@ -33,7 +31,7 @@ title: Data Analysis Projects
     <div class="project-box">
       <span class="project-number">Project II</span>
       <div class="project-header">
-        <img src="{{ '/assets/images/people.png' | relative_url }}" alt="Population Icon">
+        <img src="{{ '/assets/images/people.png' | relative_url }}" alt="Population Icon"> <!-- Ensure this image exists -->
         <div class="project-header-text">
           <h3>Global Population Dynamics</h3>
           <div class="dataset-title">World Bank Population Data</div>
@@ -50,7 +48,7 @@ title: Data Analysis Projects
     <div class="project-box">
       <span class="project-number">Project III</span>
       <div class="project-header">
-        <img src="{{ '/assets/images/stock-market.png' | relative_url }}" alt="Stock Market Icon">
+        <img src="{{ '/assets/images/stock-market.png' | relative_url }}" alt="Stock Market Icon"> <!-- Ensure this image exists -->
         <div class="project-header-text">
           <h3>BAC Stock Volatility Analysis</h3>
           <div class="dataset-title">Kaggle BAC Stock Dataset</div>
