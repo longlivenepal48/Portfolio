@@ -5,37 +5,6 @@ title: Home
 
 # Welcome to My Professional Portfolio
 
-<p class="page-intro-paragraph"> {/* Using a class for specific styling if needed, otherwise just <p> is fine for global justify */}
-  I'm a strategic financial professional with expertise in financial analysis, audit management, and data analytics. My background combines traditional accounting with modern data analysis techniques to uncover insights and drive business value.
-</p>
-
-<!-- "Portfolio Sections Overview" has been REMOVED -->
-
-## Featured Sections
-<p class="section-intro">Click below to explore different facets of my work:</p>
-<div class="featured-sections-container">
-    <a href="{{ '/introduction.html' | relative_url }}" class="featured-section">
-        <h3><i class="fas fa-user-tie"></i> About Me</h3>
-        Okay, `_layouts/default.html` and the new, full `assets/css/style.css` are set.
-
----
-
-**File 3 of 7: `index.md` (Removing "Portfolio Sections Overview")**
-
-As requested, we will remove the "Portfolio Sections Overview" block from the homepage. The page will consist of the main welcome, the "Featured Sections" cards, and "Professional Highlights." All paragraphs and list items will be justified by the global CSS.
-
-*   **Location:** `portfolio/index.md`
-*   **Action:** Replace the entire content of your `index.md` file with the following code.
-
-```markdown
----
-layout: default
-title: Home
-description: "Welcome to Anup Acharya's Data Science Portfolio. Explore projects in data analysis, big data, and Kaggle competition entries, demonstrating expertise in finance and analytics."
----
-
-# Welcome to My Professional Portfolio
-
 <p class="section-intro">
   I'm a strategic financial professional with expertise in financial analysis, audit management, and data analytics. My background combines traditional accounting with modern data analysis techniques to uncover insights and drive business value.
 </<p>Discover my professional background, extensive experience, and qualifications as a Chartered Accountant & CPA, with a strong focus on data-driven financial analysis.</p>

@@ -21,7 +21,7 @@ title: Introduction
 </div>
 
 <p class="intro-pitch">
-A results-oriented Data Analyst and Chartered Accountant with over 6 years of experience leveraging financial acumen and advanced analytical skills to transform complex data into actionable insights. Passionate about driving business decisions, optimizing processes, and uncovering financial narratives through meticulous data exploration, robust analysis (SQL, R, Python), and compelling visualizations (Tableau). Eager to apply my expertise to solve challenging problems and contribute to data-driven success. [Tailor this pitch to be uniquely yours!]
+A results-oriented Data Analyst and Chartered Accountant with over 6 years of experience leveraging financial acumen and advanced analytical skills to transform complex data into actionable insights. Passionate about driving business decisions, optimizing processes, and uncovering financial narratives through meticulous data exploration, robust analysis (SQL, R, Python), and compelling visualizations (Tableau). Eager to apply my expertise to solve challenging problems and contribute to data-driven success.
 </p>
   
 # Professional Profile
