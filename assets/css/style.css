@@ -13,7 +13,7 @@
  * 8.  Project Cards (MAJOR OVERHAUL - Clickable, Hover Effects, Internal Layout)
  * 9.  Featured Sections (Homepage - Updated)
  * 10. Footer (Refined)
- * 11. Utility Classes
+ * 11. Utility Classes (includes .text-justify)
  * 12. Accessibility & Focus Styles
  * 13. Responsive Design (Enhanced)
  * 14. Dark Mode (Enhanced - System Preference)
@@ -149,9 +149,8 @@ h4 { font-size: 1.25rem; } /* ~20px */
 
 p {
   margin-bottom: var(--spacing-unit);
-  text-align: left; 
+  text-align: left; /* Default to left-align for general readability */
 }
-p.justified { text-align: justify; } /* Add this class if justify is specifically needed */
 
 strong, b { font-weight: var(--font-weight-semibold); color: var(--color-primary-deep); }
 em, i { font-style: italic; }
@@ -520,6 +519,14 @@ a.featured-section:focus-within {
 .mb-0 { margin-bottom: 0 !important; }
 .mt-0 { margin-top: 0 !important; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+.text-justify {
+  text-align: justify;
+  -webkit-hyphens: auto; /* Safari */
+  -moz-hyphens: auto; /* Firefox (older) */
+  -ms-hyphens: auto;     /* IE/Edge (older) */
+  hyphens: auto;         /* Standard */
+}
+
 
 /* --------------------
  * 12. Accessibility & Focus Styles
