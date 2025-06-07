@@ -587,27 +587,28 @@ a.featured-section:focus-within {
 .site-footer {
   background-color: var(--color-primary);
   color: var(--color-text-on-dark);
-  padding: calc(var(--spacing-unit) * 1.5) 0;
+  padding: calc(var(--spacing-unit) * 1.5) 0; /* REDUCED: Was 2.5 units */
   margin-top: auto; 
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* REDUCED: Was 0.9rem */
 }
 .footer-content-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--spacing-unit);
+  gap: calc(var(--spacing-unit) * 0.75); /* REDUCED: Was 1 unit */
 }
-.footer-copyright p { /* This <p> will be justified */
+.footer-copyright p { 
   margin: 0;
 }
 .footer-back-button button#backBtn {
   background-color: var(--color-secondary);
   color: var(--color-surface);
   border: none;
-  padding: 0.6em 1.2em;
+  padding: 0.4em 1em; /* REDUCED: Was 0.6em 1.2em */
   border-radius: var(--border-radius);
-  font-weight: 600;
+  font-weight: 500; /* REDUCED: Was 600 */
+  font-size: 0.8rem; /* REDUCED: Was 0.9rem - matches new .site-footer fs */
   cursor: pointer;
   transition: var(--transition-base);
 }
