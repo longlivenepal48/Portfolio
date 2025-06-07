@@ -1,69 +1,32 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog or site, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# Site settings
-# These are used to personalize your new site. If you don't mind sharing your habits,
-# uncomment the following line and run 'bundle exec jekyll serve' to retrieve content.
-# analytics: true
+# _config.yml
 
-# Title of your site
+# Your existing title, email, description, baseurl, url, etc. should remain here
 title: CA. Anup Acharya - Data Science Portfolio
-# Your email address
 email: longlivenepal48@gmail.com
-# A short description of your site, used for web search results (meta description)
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Anup Acharya's professional data science portfolio, showcasing CV, 
   data analysis projects, big data expertise, and Kaggle competition entries.
+baseurl: "/anup_portfolio" # Crucial: Ensure this matches your GitHub Pages subpath
+url: "https://longlivenepal48.github.io" # Crucial: Your GitHub Pages domain
 
-# The subpath of your site, e.g. /blog
-# If your site is at https://username.github.io/repository-name/
-# then baseurl should be "/repository-name".
-# For your site https://longlivenepal48.github.io/anup_portfolio/
-baseurl: "/anup_portfolio"
-
-# The base hostname & protocol for your site, e.g. http://example.com
-# For your site https://longlivenepal48.github.io/anup_portfolio/
-url: "https://longlivenepal48.github.io"
-
-# GitHub username and repository name (optional, but can be useful)
 github_username: longlivenepal48
-github_repo: anup_portfolio
-
-# Social links (optional, you can use these in your templates)
-# twitter_username: your_twitter_handle
-linkedin_username: ca-anup-acharya-761737ba # Just the username part from the URL
-# github_username: longlivenepal48 # Already defined above
+# github_repo: anup_portfolio # Optional, can be derived
+linkedin_username: ca-anup-acharya-761737ba
 
 # Build settings
-markdown: kramdown
-theme: null # Important if you're using your own custom CSS and layouts
+markdown: kramdown # Ensure kramdown is specified if you added it to Gemfile
+theme: null       # Since you have custom styling
 
-# Plugins supported by GitHub Pages by default:
-# https://pages.github.com/versions/
-# You can add more here if needed, e.g., jekyll-seo-tag
 plugins:
-  - jekyll-feed    # For an Atom feed (optional for a portfolio)
-  - jekyll-sitemap # For generating a sitemap.xml (good for SEO)
-  # - jekyll-seo-tag # For better SEO meta tags (highly recommended)
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag # This line is key
 
 # Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal list of excluded items for the build.
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - README.md # If you don't want the main README to be processed into an HTML page
-  # - LICENSE # If you don't want the LICENSE to be processed into an HTML page
+  - vendor/      # Bundler's typical install path if specified
+  # - README.md  # Uncomment if you don't want README.md built into an HTML page
+  # - LICENSE    # Uncomment if you don't want LICENSE built into an HTML page

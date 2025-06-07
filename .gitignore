@@ -7,7 +7,7 @@ Thumbs.db
 
 # Temporary files
 *.log
-*.cache # Note: .jekyll-cache/ is more specific for Jekyll
+# *.cache # Covered by .jekyll-cache/ below more specifically
 *.tmp
 
 # Sensitive data
@@ -28,12 +28,13 @@ _site/
 
 # Jekyll specific cache/metadata
 .sass-cache/
-.jekyll-cache/ # More specific than just *.cache for Jekyll
+.jekyll-cache/
 .jekyll-metadata
 
 # Bundler files
 .bundle/
-vendor/ # Covers vendor/bundle, vendor/cache, vendor/gems, vendor/ruby
-Gemfile.lock # Often committed, but can be ignored if all collaborators manage their own lock file. 
-             # For solo projects or when deploying via GitHub Pages, it's fine to commit it.
-             # If you decide to commit Gemfile.lock, remove it from here.
+vendor/ # Standard path for gems installed with --path vendor/bundle
+
+# Gemfile.lock is usually committed to ensure reproducible builds,
+# especially for GitHub Pages. If you decide NOT to commit it,
+# add "Gemfile.lock" here. For now, we assume it WILL be committed.
