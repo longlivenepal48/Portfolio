@@ -9,10 +9,9 @@ title: Introduction
     <h2>CA. Anup Acharya</h2>
     <p class="tagline">Chartered Accountant | CPA (Australia) | Certified Data Analyst</p>
     <div class="introduction-contact-icons">
-      <a href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer" aria-label="Email Anup Acharya">
+      <a href="mailto:{{ longlivenepal48@gmail.com }}" target="_blank" rel="noopener noreferrer" aria-label="Email Anup Acharya">
         <img src="{{ '/assets/images/gmail.png' | relative_url }}" alt="Gmail Icon" >
       </a>
-         {/* Simple spacing */}
       <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="Anup Acharya's LinkedIn Profile">
         <img src="{{ '/assets/images/linkedin.png' | relative_url }}" alt="LinkedIn Icon" >
       </a>

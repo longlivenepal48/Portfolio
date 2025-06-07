@@ -2,42 +2,47 @@
 
 # Site settings
 # These are used to personalize your new site.
-title: "CA. Anup Acharya - Data Science Portfolio" # Full title for browser, SEO
+title: "CA. Anup Acharya - Data Science Portfolio" # Full title for browser, SEO, and jekyll-seo-tag
 author_name: "CA. Anup Acharya" # Shorter name for display in header/footer
 email: "longlivenepal48@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
   Anup Acharya's professional data science portfolio, showcasing CV, 
   data analysis projects, big data expertise, and Kaggle competition entries.
+lang: "en" # Site-wide language, BCP 47 tag. Used by default.html and jekyll-seo-tag.
 
 # URL and BaseURL settings - CRITICAL for GitHub Pages
 # Your site is hosted at: https://longlivenepal48.github.io/portfolio/
-url: "https://longlivenepal48.github.io" # This is the root domain for your GitHub Pages. DO NOT include /portfolio here.
-baseurl: "/portfolio" # This is the subpath for your specific repository. MUST start with a forward slash.
+url: "https://longlivenepal48.github.io" # The root domain for your GitHub Pages. DO NOT include /portfolio here.
+baseurl: "/portfolio" # The subpath for your specific repository. MUST start with a forward slash.
 
 # GitHub specific (optional, but can be used by themes or plugins)
 github_username: "longlivenepal48"
 # github_repo: "portfolio" # This can be inferred, not strictly needed if baseurl is correct
 
-# Social links (used in _layouts/default.html)
+# Social links (used in _layouts/default.html and potentially by jekyll-seo-tag)
+# For jekyll-seo-tag, you can also specify twitter:username, facebook:app_id etc.
+# See jekyll-seo-tag documentation for more options.
 linkedin_username: "ca-anup-acharya-761737ba" # Just the username part from the LinkedIn URL
 
 # Build settings
 markdown: kramdown
-theme: null # We are using custom styling
+theme: null # We are using custom styling, not a pre-built Jekyll theme.
 
 # Plugins - Ensure these are correctly listed and also in your Gemfile
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - jekyll-feed    # Generates an Atom feed for your posts (if you add posts)
+  - jekyll-sitemap # Generates a sitemap.xml file for better SEO
+  - jekyll-seo-tag # Generates comprehensive SEO meta tags
 
 # Exclude from processing.
-# The following items will not be processed, by default.
+# The following items will not be processed by Jekyll.
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules/
-  - vendor/
-  - README.md 
-  - LICENSE.md # If you have a LICENSE.md 
-  - "*.Rmd" # Uncomment if Rmd files are ONLY for generating HTML separately and NOT Jekyll pages
+  - node_modules/   # Folder for Node.js dependencies, if any
+  - vendor/         # Standard folder for Bundler-installed gems if using --path
+  - README.md       # Typically not processed into an HTML page
+  - LICENSE.md      # If you have a LICENSE.md and don't want it processed
+  - "*.Rmd"       # Uncomment if Rmd files are ONLY for generating HTML separately 
+  - "*.Rproj"      # R project files, not needed in the site
+  - ".DS_Store"    # macOS system file, not needed in the site
