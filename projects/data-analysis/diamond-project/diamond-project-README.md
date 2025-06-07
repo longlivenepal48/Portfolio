@@ -1,7 +1,7 @@
 ---
 title: "Diamond Dataset Analysis"
 author: "CA. Anup Acharya"
-date: "`r Sys.Date()`"
+date: 2024-03-15
 output:
   html_document:
     toc: true
